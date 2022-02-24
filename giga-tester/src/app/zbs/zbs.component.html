@@ -1,0 +1,28 @@
+<div id="info">
+  <h1>UWAGA!</h1>
+  <p>
+    Rozwiązujesz ten test na własną odpowiedzialność! W tym roku zmienił się prowadzący i
+    poniższe pytania raczej się nie powtórzą.
+  </p>
+</div>
+
+<div id="exam">
+  <h1>Pytania zamknięte:</h1>
+  <ul>
+    <li *ngFor="let q of closedQuestions; let i = index">
+      <p>
+        {{i + 1}}. {{q.content}}
+      </p>
+      <div *ngFor="let a of q.answers; let j = index" class="closed-answer" (click)="onSelectAnswer(i, j)"
+      [ngClass]="{'selected': closedQuestions[i].selected === j}">
+        {{a}}
+      </div>
+    </li>
+  </ul>
+  <h1>Pytania otwarte:</h1>
+  <ul>
+
+  </ul>
+  <button *ngIf="!showAnswers" (click)="onSubmit()">Sprawdz</button>
+  <button *ngIf="showAnswers" (click)="onNewExam()">Nowa wejściówka</button>
+</div>
