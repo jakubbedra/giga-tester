@@ -1,0 +1,34 @@
+<div id="exam">
+  <h1>Pytania: </h1>
+  <h3 [hidden]="!showAnswers">Wynik: {{calculateScore()}}/{{maxPointsMultipleChoiceQuestions}}</h3>
+  <ul>
+    <li *ngFor="let q of multipleChoiceQuestions; let i = index">
+      <p>
+        {{i + 1}}. {{q.content}}
+      </p>
+      <div *ngFor="let a of q.answers; let j = index" class="closed-answer" (click)="onSelectAnswer(i, j)"
+           [ngClass]="{'selected': multipleChoiceQuestions[i].selected.indexOf(j) > -1}">
+        <span
+          [ngClass]="{
+          'correct-answer': multipleChoiceQuestions[i].correctAnswers.indexOf(j) > -1 && showAnswers,
+          'wrong-answer': multipleChoiceQuestions[i].selected.indexOf(j) > -1 && multipleChoiceQuestions[i].correctAnswers.indexOf(j) === -1 && showAnswers
+          }">
+          {{a}}
+        </span>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li *ngFor="let q of openQuestions; let i = index">
+      <p>
+        {{i + 1 + multipleChoiceQuestions.length}}. {{q.content}}
+      </p>
+      <p *ngIf="showAnswers" class="correct-answer">
+        {{q.correctAnswer}}
+      </p>
+      <textarea rows="24"></textarea>
+    </li>
+  </ul>
+  <button *ngIf="!showAnswers" (click)="onSubmit()">Sprawdź</button>
+  <button *ngIf="showAnswers" (click)="onNewExam()">Nowy Egzamin</button>
+</div>

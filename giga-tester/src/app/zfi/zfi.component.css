@@ -1,24 +1,5 @@
-select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: none;
-  box-shadow: 0px 0px 2px 2px black;
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: #F5F7FA;
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
 select:focus {
   border: 1px rgba(255, 255, 255, 0.05);;
-}
-
-option {
-  background-color: #323232;
-  border: 1px solid black;
-  font-size: 18px;
 }
 
 button {
@@ -40,14 +21,38 @@ button:hover {
   cursor: pointer;
 }
 
-#selection, #entry {
+#info, #exam {
   font-size: 16px;
   width: 40%;
   margin: 0 auto;
   padding-top: 10px;
 }
 
-input, textarea {
+input {
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #F5F7FA;
+  background-color: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.checkmark {
+  height: 10px;
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+li p {
+  font-size: 24px;
+}
+
+ul {
+  width: 100%;
+}
+
+textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -60,11 +65,40 @@ input, textarea {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-.answer {
-  color: lawngreen;
-  white-space: pre-line;
+.closed-answer {
+  transition: all 0.3s ease 0s;
+  font-size: 24px;
+  cursor: pointer;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
+.closed-answer:hover {
+  color: #bb86fc;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.selected {
+  color: #bb86fc;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.correct-answer {
+  color: lawngreen;
+}
+
+.wrong-answer {
+  color: red;
+}
+
+#info h1 {
+  color: red;
+  text-align: center;
+}
+
+#info p {
+  text-align: center;
+}
 
 @media only screen and (max-width: 768px) {
   #info {
@@ -74,21 +108,11 @@ input, textarea {
     font-size: 300%;
   }
 
-  #entry {
+  #exam {
     width: 80%;
     justify-content: center;
     margin: 0 auto;
     font-size: 300%;
-  }
-
-  #selection {
-    width: 80%;
-    font-size: 240%;
-  }
-
-  select {
-    height: 140%;
-    font-size: 200%;
   }
 
   .closed-answer {

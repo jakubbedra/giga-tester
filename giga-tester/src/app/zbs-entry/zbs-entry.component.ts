@@ -26,6 +26,7 @@ export class ZbsEntryComponent implements OnInit {
   }
 
   initEntry(): void {
+    this.showAnswers = false;
     this.questions = this.questionsService.getRandomOpenQuestions(this.selectedEntry, 5);
     console.log(this.selectedEntry);
   }

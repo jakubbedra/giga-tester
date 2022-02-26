@@ -52,6 +52,19 @@ ul {
   width: 100%;
 }
 
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  box-shadow: 0px 0px 2px 2px black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #F5F7FA;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
 .closed-answer {
   transition: all 0.3s ease 0s;
   font-size: 24px;
@@ -85,4 +98,36 @@ ul {
 
 #info p {
   text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  #info {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 300%;
+  }
+
+  #exam {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 300%;
+  }
+
+  .closed-answer {
+    font-size: 100%;
+  }
+
+  textarea {
+    font-size: 120%;
+  }
+
+  button {
+    font-size: 140%;
+  }
+
+  li p {
+    font-size: 120%;
+  }
 }

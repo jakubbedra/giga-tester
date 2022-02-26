@@ -8,13 +8,25 @@ import { HeaderComponent } from './header/header.component';
 import { ZbsEntryComponent } from './zbs-entry/zbs-entry.component';
 import {QuestionsService} from "./injectable/questions-service";
 import { ZbsComponent } from './zbs/zbs.component';
+import { RpiComponent } from './rpi/rpi.component';
+import { ZfiComponent } from './zfi/zfi.component';
+import { BskComponent } from './bsk/bsk.component';
+import { WzrComponent } from './wzr/wzr.component';
+import { JoComponent } from './jo/jo.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ZbsEntryComponent,
-    ZbsComponent
+    ZbsComponent,
+    RpiComponent,
+    ZfiComponent,
+    BskComponent,
+    WzrComponent,
+    JoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,12 @@ import {ZbsEntry5} from "../data/zbs/zbs-entry5";
 import {ZbsEntry6} from "../data/zbs/zbs-entry6";
 import {ZbsEntry7} from "../data/zbs/zbs-entry7";
 import {ZbsOldExam} from "../data/zbs/zbs-old-exam";
+import {RpiExam} from "../data/rpi/rpi-exam";
+import {ZfiQuizes} from "../data/zfi/zfi-quizes";
+import {MultipleChoiceQuestion} from "../questions/multiple-choice-question.model";
+import {BskExam} from "../data/bsk/bsk-exam";
+import {WzrExam} from "../data/wzr/wzr-exam";
+import {JoExam} from "../data/jo/jo-exam";
 
 @Injectable()
 export class QuestionsService {
@@ -24,6 +30,24 @@ export class QuestionsService {
       return [];
     }
     for (let q of closedQuestions) {
+      tmp.push(q);
+    }
+    for (let i = 0; i < amount; i++) {
+      let ind = Math.floor(Math.random() * tmp.length);
+      ret.push(tmp[ind]);
+      tmp.splice(ind, 1);
+    }
+    return ret;
+  }
+
+  public getRandomMultipleChoiceQuestions(category: string, amount: number): MultipleChoiceQuestion[] {
+    let ret: MultipleChoiceQuestion[] = [];
+    let tmp: MultipleChoiceQuestion[] = [];
+    let multipleChoiceQuestions = QuestionsService.findMultipleChoiceQuestionsList(category);
+    if (multipleChoiceQuestions.length < amount) {
+      return [];
+    }
+    for (let q of multipleChoiceQuestions) {
       tmp.push(q);
     }
     for (let i = 0; i < amount; i++) {
@@ -75,6 +99,15 @@ export class QuestionsService {
       case "zbs": {
         return ZbsOldExam.openQuestions;
       }
+      case "bsk": {
+        return BskExam.openQuestions;
+      }
+      case "wzr": {
+        return WzrExam.questions;
+      }
+      case "jo": {
+        return JoExam.openQuestions;
+      }
     }
     return [];
   }
@@ -83,6 +116,21 @@ export class QuestionsService {
     switch (category) {
       case "zbs": {
         return ZbsOldExam.closedQuestions;
+      }
+      case "rpi": {
+        return RpiExam.closedQuestions;
+      }
+      case "zfi": {
+        return ZfiQuizes.closedQuestions;
+      }
+    }
+    return [];
+  }
+
+  private static findMultipleChoiceQuestionsList(category: string) {
+    switch (category) {
+      case "bsk": {
+        return BskExam.multipleChoiceQuestions;
       }
     }
     return [];

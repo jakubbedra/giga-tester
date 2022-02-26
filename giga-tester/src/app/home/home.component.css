@@ -1,0 +1,25 @@
+.info-div {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 10px;
+  font-size: 24px;
+}
+
+a {
+  transition: all 0.3s ease 0s;
+  color: #bb86fc;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+@media only screen and (max-width: 768px) {
+  .info-div {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 300%;
+  }
+}

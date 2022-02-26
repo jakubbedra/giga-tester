@@ -1,21 +1,19 @@
 import {Component, OnInit} from '@angular/core';
-import {QuestionsService} from "../injectable/questions-service";
 import {ClosedQuestion} from "../questions/closed-question.model";
-import {OpenQuestion} from "../questions/open-question.model";
+import {QuestionsService} from "../injectable/questions-service";
 
 @Component({
-  selector: 'app-zbs',
-  templateUrl: './zbs.component.html',
-  styleUrls: ['./zbs.component.css']
+  selector: 'app-zfi',
+  templateUrl: './zfi.component.html',
+  styleUrls: ['./zfi.component.css']
 })
-export class ZbsComponent implements OnInit {
+export class ZfiComponent implements OnInit {
 
   showAnswers: boolean;
   pointsPerClosedQuestion = 1;
-  maxPointsClosedQuestions = 10;
+  maxPointsClosedQuestions = 5;
 
   closedQuestions: ClosedQuestion[];
-  openQuestions: OpenQuestion[];
 
   constructor(
     private questionsService: QuestionsService
@@ -28,9 +26,11 @@ export class ZbsComponent implements OnInit {
   }
 
   initExam() {
-    this.closedQuestions = this.questionsService.getRandomClosedQuestions("zbs", 10)
+    this.closedQuestions = this.questionsService.getRandomClosedQuestions("zfi", 5)
       .map(this.mixQuestion);
-    this.openQuestions = this.questionsService.getRandomOpenQuestions("zbs", 1);
+    this.closedQuestions.forEach(q => {
+      q.selected = -1;
+    });
   }
 
   onSelectAnswer(i: number, j: number) {
@@ -78,7 +78,6 @@ export class ZbsComponent implements OnInit {
       answersStrings.splice(ind, 1);
     }
     question.correctAnswer = correctAnswerNewInd;
-    //console.log(question);
     return question;
   }
 

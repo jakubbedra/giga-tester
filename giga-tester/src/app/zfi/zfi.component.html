@@ -1,11 +1,6 @@
-<div id="info">
-  <h1>UWAGA!</h1>
-  <p>
-    Rozwiązujesz ten test na własną odpowiedzialność! W tym roku zmienił się prowadzący i
-    poniższe pytania raczej się nie powtórzą.
-  </p>
-</div>
-
+<span id="info">
+    **Tutaj to chuj wie co XD chyba pytanka z quizów bo zaliczenia nie było jeszcze nigdy ¯\_(ツ)_/¯
+</span>
 <div id="exam">
   <h1>Pytania zamknięte:</h1>
   <h3 [hidden]="!showAnswers">Wynik: {{calculateScore()}}/{{maxPointsClosedQuestions}}</h3>
@@ -24,18 +19,6 @@
           {{a}}
         </span>
       </div>
-    </li>
-  </ul>
-  <h1>Pytania otwarte:</h1>
-  <ul>
-    <li *ngFor="let q of openQuestions; let i = index">
-      <p>
-        {{i + 1}}. {{q.content}}
-      </p>
-      <p *ngIf="showAnswers" class="correct-answer">
-        {{q.correctAnswer}}
-      </p>
-      <textarea rows="24"></textarea>
     </li>
   </ul>
   <button *ngIf="!showAnswers" (click)="onSubmit()">Sprawdź</button>

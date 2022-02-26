@@ -1,0 +1,36 @@
+
+@media only screen and (max-width: 768px) {
+  #info {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 300%;
+  }
+
+  #exam {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 300%;
+  }
+
+  .closed-answer {
+    font-size: 100%;
+  }
+
+  textarea {
+    font-size: 120%;
+  }
+
+  button {
+    font-size: 140%;
+  }
+
+  span {
+    font-size: 100%;
+  }
+
+  li p {
+    font-size: 120%;
+  }
+}

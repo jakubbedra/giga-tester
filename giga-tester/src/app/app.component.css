@@ -12,3 +12,9 @@
   border-radius: 8px;
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 40% auto;
+    width: 340%;
+  }
+}

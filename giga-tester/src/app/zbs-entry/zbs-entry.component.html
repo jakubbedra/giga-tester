@@ -13,6 +13,7 @@
 
 <div id="entry" *ngIf="selectedEntry!==''">
   <h1>Pytania:</h1>
+  <p *ngIf="selectedEntry==='vlan2' || selectedEntry==='netscan'">Brak pytań w paczce.</p>
   <ul>
     <li *ngFor="let q of questions; let i = index">
       <p>
