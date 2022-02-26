@@ -30,6 +30,9 @@ export class ZbsComponent implements OnInit {
   initExam() {
     this.closedQuestions = this.questionsService.getRandomClosedQuestions("zbs", 10)
       .map(this.mixQuestion);
+    this.closedQuestions.forEach(q => {
+      q.selected = -1;
+    });
     this.openQuestions = this.questionsService.getRandomOpenQuestions("zbs", 1);
   }
 

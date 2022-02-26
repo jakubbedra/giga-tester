@@ -7,6 +7,10 @@ header h1 {
   font-size: 36px;
 }
 
+h1:hover {
+  cursor: pointer;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -17,7 +21,7 @@ header {
   box-shadow: 0px 0px 2px 2px black;
 }
 
-.logo{
+.logo {
   cursor: pointer;
 }
 
@@ -31,9 +35,10 @@ header {
   float: left;
   height: 100%;
   padding: 24px 20px;
-  border-radius: 8px;/*
-  border-right: 1px solid black;
-  border-left: 1px solid black;*/
+  border-radius: 8px;
+  /*
+    border-right: 1px solid black;
+    border-left: 1px solid black;*/
 }
 
 .navigation-links li:hover {

@@ -1,1 +1,24 @@
-<p id="info">Coming soon...</p>
+<div id="selection">
+  <label for="entries">Wybierz kolosa:</label>
+  <select name="entries" id="entries" (change)="initEntry()" [(ngModel)]="selectedEntry">
+    <option value="jo-kuchta">Kuchta</option>
+    <option value="jo-bowisz">Bowisz</option>
+  </select>
+</div>
+
+<div id="entry" *ngIf="selectedEntry!==''">
+  <h1>Pytania:</h1>
+  <ul>
+    <li *ngFor="let q of questions; let i = index">
+      <p>
+        {{i + 1}}. {{q.content}}
+      </p>
+      <p *ngIf="showAnswers" class="answer">
+        {{q.correctAnswer}}
+      </p>
+      <textarea rows="6"></textarea>
+    </li>
+  </ul>
+  <button *ngIf="!showAnswers" (click)="onSubmit()">Sprawdz</button>
+  <button *ngIf="showAnswers" (click)="onNewEntry()">Nowy kolos</button>
+</div>

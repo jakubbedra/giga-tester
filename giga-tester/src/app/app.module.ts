@@ -14,6 +14,7 @@ import { BskComponent } from './bsk/bsk.component';
 import { WzrComponent } from './wzr/wzr.component';
 import { JoComponent } from './jo/jo.component';
 import { HomeComponent } from './home/home.component';
+import { EdComponent } from './ed/ed.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HomeComponent } from './home/home.component';
     BskComponent,
     WzrComponent,
     JoComponent,
-    HomeComponent
+    HomeComponent,
+    EdComponent
   ],
   imports: [
     BrowserModule,

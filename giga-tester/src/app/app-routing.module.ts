@@ -8,6 +8,7 @@ import {BskComponent} from "./bsk/bsk.component";
 import {WzrComponent} from "./wzr/wzr.component";
 import {JoComponent} from "./jo/jo.component";
 import {HomeComponent} from "./home/home.component";
+import {EdComponent} from "./ed/ed.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'zfi', component: ZfiComponent },
   { path: 'bsk', component: BskComponent },
   { path: 'wzr', component: WzrComponent },
-  { path: 'jo', component: JoComponent }
+  { path: 'jo', component: JoComponent },
+  { path: 'ed', component: EdComponent }
 ];
 
 @NgModule({

@@ -14,7 +14,8 @@ import {ZfiQuizes} from "../data/zfi/zfi-quizes";
 import {MultipleChoiceQuestion} from "../questions/multiple-choice-question.model";
 import {BskExam} from "../data/bsk/bsk-exam";
 import {WzrExam} from "../data/wzr/wzr-exam";
-import {JoExam} from "../data/jo/jo-exam";
+import {JoKuchtaExam} from "../data/jo/jo-kuchta-exam";
+import {JoBowiszExam} from "../data/jo/jo-bowisz-exam";
 
 @Injectable()
 export class QuestionsService {
@@ -105,8 +106,11 @@ export class QuestionsService {
       case "wzr": {
         return WzrExam.questions;
       }
-      case "jo": {
-        return JoExam.openQuestions;
+      case "jo-kuchta": {
+        return JoKuchtaExam.openQuestions;
+      }
+      case "jo-bowisz": {
+        return JoBowiszExam.openQuestions;
       }
     }
     return [];
