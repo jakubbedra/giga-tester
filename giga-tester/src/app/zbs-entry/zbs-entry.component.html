@@ -13,7 +13,7 @@
 
 <div id="entry" *ngIf="selectedEntry!==''">
   <h1>Pytania:</h1>
-  <p *ngIf="selectedEntry==='vlan2' || selectedEntry==='netscan'">Brak pytań w paczce.</p>
+  <p *ngIf="selectedEntry==='netscan'">Brak pytań w paczce.</p>
   <ul>
     <li *ngFor="let q of questions; let i = index">
       <p>
@@ -22,7 +22,7 @@
       <p *ngIf="showAnswers" class="answer">
         {{q.correctAnswer}}
       </p>
-      <textarea rows="6"></textarea>
+      <textarea rows="6" id="userAnswer{{i}}"></textarea>
     </li>
   </ul>
   <button *ngIf="!showAnswers" (click)="onSubmit()">Sprawdz</button>
