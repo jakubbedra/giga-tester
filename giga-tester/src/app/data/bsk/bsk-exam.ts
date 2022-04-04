@@ -34,7 +34,7 @@ create the so-called a hash of a length same as the length of the input data )
 `, `
 Uprzypadkowienie danych podczas transmisji strumieniowej (to randomize the data
 during the data streaming )
-`], [0,1]),
+`], [0, 1]),
     new MultipleChoiceQuestion(`
 Jak potocznie nazywa się kolejne cykle obliczeń wykonywanych w algorytmie Rijndael?
 Wybierz jedną lub więcej:
@@ -103,7 +103,7 @@ resistant to the Denial of Service attacks)
 `, `
 Włamania wykrywane są z prawdopodobieństwem bliskim 100% (The intruder can be
 detected with a probability close to 100%)
-`], [0,2]),
+`], [0, 2]),
     new MultipleChoiceQuestion(`
 Udzieleniem uprawnień do wykonania określonych działań nazywamy... (Granting
 permissions to perform specific activities is called...)
@@ -162,7 +162,7 @@ ich odporności na przykładowe ataki (Possibility of testing developed IT syste
 check their resistance to sample attacks )
 `, `
 Długi czas testów z użyciem gotowych narzędzi (Long testing time )
-`], [1,2]),
+`], [1, 2]),
     new MultipleChoiceQuestion(`
 Do jakiej grupy szyfrów należy algorytm Rijndael/AES? (To which cipher group the
 Rijndael / AES algorithm belongs to?)
@@ -174,7 +174,7 @@ Szyfry blokowe asymetryczne (Asymmetrical block ciphers )
 Szyfry strumieniowe asymetryczne (Asymmetrical stream ciphers )
 `, `
 Szyfry strumieniowe symetryczne (Symmetrical stream ciphers )
-`], [0,3]),
+`], [0, 3]),
     new MultipleChoiceQuestion(`
 Na czym polega jednokierunkowość funkcji skrótu? (What is the principle of operation of
 the one-direction hash function?)
@@ -243,7 +243,7 @@ Jest wolniejszy niż algorytm Rijndael / AES (It is slower than the Rijndael / A
 algorithm )
 `, `
 Można go użyć do uwierzytelniania użytkowników (It can be used to authenticate users )
-`], [2,3]),
+`], [2, 3]),
     new MultipleChoiceQuestion(`
 Atak typu Man in the Middle w sieciach typu 802.11 polega na: (Man in the middle attack in
 the 802.11 networks is based on:
@@ -268,7 +268,7 @@ Finansowy (Financial)
 Operacyjny (Operational)
 `, `
 Informatyczny (IT) (IT audit)
-`], [0,1,2]),
+`], [0, 1, 2]),
     new MultipleChoiceQuestion(`
 Protokół SESAME nie umożliwia... (SESAME protocol doesn’t allow to ...)
 `, [`
@@ -283,7 +283,7 @@ confidentiality of the transferred data )
 `, `
 Unifikacji tylko użytkownika z punktu widzenia uprawnień (Unify user and application
 from the point of view of permissions )
-`], [0,1,3]),
+`], [0, 1, 3]),
     new MultipleChoiceQuestion(`
 Jakie jest prawdopodobieństwo przechwycenia danych przez osobę nieuprawnioną w
 przypadku użycia dowodu o wiedzy zerowej? (What is the probability of interception of
@@ -322,7 +322,7 @@ Połączenie radiowe (Radio link )
 Linię optyczną (Optic line )
 `, `
 Linię przewodową sieci Ethernet/Token Ring (Ethernet or Token Ring lines )
-`], [0,1,2,3]),
+`], [0, 1, 2, 3]),
     new MultipleChoiceQuestion(`
 Jaki rodzaj kryptografii stosowany jest w odniesieniu do kart inteligentnych? (What type
 of cryptography is used in smart cards?)
@@ -361,7 +361,7 @@ MAC
 DAC
 `, `
 RBAC
-`], [1,2,3]),
+`], [1, 2, 3]),
     new MultipleChoiceQuestion(`
 Fałszywym odrzuceniem nazywamy (What is called as false detection?)
 `, [`
@@ -409,7 +409,7 @@ Spoofing TCP (TCP spoofing )
 Spoofing DNS (DNS spoofing )
 `, `
 Spoofing SSL (SSL spoofing )
-`], [0,1,2]),
+`], [0, 1, 2]),
     new MultipleChoiceQuestion(`
 Atak typu Denial of Service polega na:
 `, [`
@@ -434,7 +434,7 @@ Ramki organizacyjne (Organizational frames )
 Ramki szyfrujące (Encryption frames )
 `, `
 Ramki sterujące (Control frames )
-`], [0,1,3]),
+`], [0, 1, 3]),
     new MultipleChoiceQuestion(`
 Który rodzaj wirusa komputerowego dopisuje swój kod za kodem zasadniczym
 programu? (Which virus adds its code after the original program code?)
@@ -488,7 +488,7 @@ Radius, PEAP
 WPF, EAP-MD5
 `, `
 WAP, PEAP
-`], [0,1]),
+`], [0, 1]),
     new MultipleChoiceQuestion(`
 Do procesu zarządzania transakcjami należy... (During transaction management
 process...)
@@ -503,7 +503,7 @@ Archiwizowanie certyfikatów transakcji (Archiving the transaction certificates 
 `, `
 Pominięcie procesu weryfikacji zaufanych klientów (Omitting of the verification of
 thrusted clients )
-`], [1,2]),
+`], [1, 2]),
     new MultipleChoiceQuestion(`
 Które z narzędzi nie jest wykorzystywane podczas realizowania transakcji internetowych?
 (Which tool is not used during internet transaction?)
@@ -545,7 +545,7 @@ Możliwe jest przesyłanie danych pomiędzy dwoma użytkownikami na dystansie do
 `, `
 Nie stosuje się szyfrowania wzajemnego uwierzytelnienia (A mutual authentication is not
 used )
-`], [0,1]),
+`], [0, 1]),
     new MultipleChoiceQuestion(`
 Które z zagrożeń/problemów nie dotyczy wektorów inicjujących? (Which threat is not
 related to the initializing vectors?)
@@ -573,7 +573,7 @@ Osoby na szczeblu kierowniczym (People at management level )
 Osoby zarządzające oraz pracownicy firmy (Managers and employees of the company )
 `, `
 Osoby zarządzające, pracownicy oraz użytkownicy (Managers, employees and users )
-`], [1,2]),
+`], [1, 2]),
     new MultipleChoiceQuestion(`
 Jaka trudność występuje podczas implementacji modelu RBAC? (What is the difficulty in
 the implementation of the RBAC model?)
@@ -586,7 +586,7 @@ company’s structure )
 Ograniczenie liczby możliwych ról (Limitation of maximum number of roles )
 `, `
 Brak dostępnego uniwersalnego rozwiązania. (Unavailability of a universal solution.)
-`], [1,3]),
+`], [1, 3]),
     new MultipleChoiceQuestion(`
 Która z technik umożliwia wykrycie nieznanego wirusa komputerowego? (Which
 technique can be used to detect unknown virus?)
@@ -600,7 +600,7 @@ Skanowanie plików (File scanning )
 `, `
 Blokowanie aktywności w systemie operacyjnym (Blocking the activity in the operating
 system )
-`], [1,3]),
+`], [1, 3]),
     new MultipleChoiceQuestion(`
 Która z cech jest niepożądana w ujęciu bezpieczeństwa poczty elektronicznej? (Which
 feature is undesirable with respect to the security of e-mail?)
@@ -612,7 +612,7 @@ Możliwość wyparcia się treści (Possibility of repudiation )
 Weryfikacja tożsamości tylko nadawcy wiadomości (Verification only the sender identity )
 `, `
 Kontrola spójności wiadomości (Consistency of the e-mail )
-`], [1,2]),
+`], [1, 2]),
     new MultipleChoiceQuestion(`
 Ocenę systemów przeprowadza się w celu... (Systems evaluation is carried out for the
 purpose of...)
@@ -627,7 +627,7 @@ Opracowania specyfikacji systemu (Developing the system specifications )
 `, `
 Okresowej oceny bezpieczeństwa systemu, znalezienia i poprawienia istniejących
 błędów (Periodic evaluation of system security, finding and correcting existing errors )
-`], [1,3]),
+`], [1, 3]),
     new MultipleChoiceQuestion(`
 W jakim celu w tzw bezpiecznych stacjach roboczych stosowane jest silne ekranowanie
 elektromagnetyczne? (What is the purpose of strong electromagnetic shields in the safe
@@ -644,7 +644,7 @@ komercyjnym (To ensure the compatibility with the commercial solutions )
 `, `
 W celu uniemożliwienia wykrycia i przechwycenia emisji elektromagnetycznej (To make
 it impossible to intercept the electromagnetic emission )
-`], [0,2]),
+`], [0, 2]),
     new MultipleChoiceQuestion(`
 W jaki sposób sprzętowo zwiększa się bezpieczeństwo systemu informatycznego? (How
 hardware security of the IT system is increased?)
@@ -659,7 +659,7 @@ replacement of overworked components )
 `, `
 Stosując nadmiarowe podzespoły bazowe w serwerach (By using redundant
 components in servers )
-`], [0,2,3]),
+`], [0, 2, 3]),
     new MultipleChoiceQuestion(`
 W jakim celu stosowane jest tunelowanie SSL/TSL albo połączenia VPN? (Why we use the
 SSL/TSL or VPN connections?) Wybierz jedną lub więcej:
@@ -750,6 +750,95 @@ Na czym polega kolizja wektorów inicjujących?
 `, `
 To taka sytuacja, kiedy różne wiadomości mają taką samą wartość funkcji skrótu.
 `),
+  ];
+
+  public static nonExamOpenQuestions: OpenQuestion[] = [
+    new OpenQuestion(`
+    Czym jest uwierzytelnianie?
+    `, `
+    Sprawdzenie wiarygodności, autentyczności dokumentu (skąd pochodzi, kiedy powstał, przez kogo utworzony, itp.) a także strony, osoby (identyfikacja) - czy jest tym za kogo się podaje.
+    `),new OpenQuestion(`
+    Czym jest autoryzacja?
+    `, `
+    Nadawanie uprawnień do wykoniania określonych działań na wskazanych obiektach lub podmiotach.
+    `),new OpenQuestion(`
+    Czym jest poufność?
+    `, `
+    Zapewnienie, że informacja jest dostępna tylko dla uprawnionych do posiadania dostępu do niej.
+    `),new OpenQuestion(`
+    Czym jest prywatność?
+    `, `
+    Prawo i/lub zdolność do ochrony danych osobistych, poszerzone o zdolność do zapobiegania wtargnięciom w osobistą przestrzeń.
+    Obejmuje to nie tylko dane osobiste, takie jak przebieg leczenia, historia pracy zawodowej, lokalizację i wykonywane czynności, lecz także również towarzyszące w tym inne osoby.
+    `),new OpenQuestion(`
+    Co to jest spójność?
+    `, `
+    Zapewnienie, że informacje i dane nie uległy nieuprawnionej zmianie ani zniszczeniu, a także zostały zachowane zwięzki pomiędzy danymi.
+    `),new OpenQuestion(`
+    Czym jest kontrola dostępu?
+    `, `
+    Zdolność do ograniczania i kontroli dostępu do systemu i jego zasobów - polega na uwierzytelnieniu, a następnie kontroli uprawnień do wykonania żadanej czynności.
+    `),new OpenQuestion(`
+    Jaki jest związek między bezpieczeństwem a dostępnością?
+    `, `
+    Nie jest bezpośrednim czynnikiem bezpieczeństwa, ale ma w wielu przypadkach kluczowe znaczenie. (np.: dostępność serwisów uwierzytelniających)
+    `),new OpenQuestion(`
+    Czym jest niezaprzeczalność?
+    `, `
+    Niezdolność do zaprzeczenia komunikacji lub wykonania kreślonego działania (np.: podpisania dokumentu, transferu plików, modyfikacji kodu) wówczas, gdy dane zdarzenia miało miejsce.
+    `), new OpenQuestion(`
+    O czym mówi zasada najniższych uprawnień?
+    `, `
+    Minimalne przywileje potrzebne do normalnych obowiązków.
+    `)/*,new OpenQuestion(`
+
+    `, `
+
+    `),new OpenQuestion(`
+
+    `, `
+
+    `),new OpenQuestion(`
+
+    `, `
+
+    `),new OpenQuestion(`
+
+    `, `
+
+    `),new OpenQuestion(`
+
+    `, `
+
+    `),new OpenQuestion(`
+
+    `, `
+
+    `),new OpenQuestion(`
+
+    `, `
+
+    `),new OpenQuestion(`
+
+    `, `
+
+    `),new OpenQuestion(`
+
+    `, `
+
+    `),new OpenQuestion(`
+
+    `, `
+
+    `),new OpenQuestion(`
+
+    `, `
+
+    `),new OpenQuestion(`
+
+    `, `
+
+    `),*/
   ];
 
 }

@@ -59,10 +59,6 @@ export class ZbsEntry3 {
       W przypadku stosowania protokołu GVRP konfiguracja przełącznika musi spełniać wymagania:
     `, `
       porty prowadzące do pozostałych przełączników powinny należeć do tego samego VLANu
-    `),
-    new OpenQuestion(`Jakie cechy posiada znacznik IEEE 802.1Q:`, `
-      <tutaj miał być obrazek ale się coś się zjebało na prodzie i cały GIGAtester™ sie wyjebał, nie chce mi się tego
-      póki co poprawiać xd>
     `)
   ];
 }
