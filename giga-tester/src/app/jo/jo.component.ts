@@ -27,7 +27,7 @@ export class JoComponent implements OnInit {
 
   initEntry(): void {
     this.showAnswers = false;
-    this.questions = this.questionsService.getRandomOpenQuestions(this.selectedEntry, 10);
+    this.questions = this.questionsService.getRandomOpenQuestions(this.selectedEntry, 10, false);
     console.log(this.selectedEntry);
   }
 

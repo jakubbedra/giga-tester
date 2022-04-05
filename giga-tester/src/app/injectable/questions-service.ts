@@ -59,10 +59,10 @@ export class QuestionsService {
     return ret;
   }
 
-  public getRandomOpenQuestions(category: string, amount: number): OpenQuestion[] {
+  public getRandomOpenQuestions(category: string, amount: number, includeCustomQuestions: boolean): OpenQuestion[] {
     let ret: OpenQuestion[] = [];
     let tmp: OpenQuestion[] = [];
-    QuestionsService.findOpenQuestionsList(category).forEach(q => tmp.push(q));
+    QuestionsService.findOpenQuestionsList(category, includeCustomQuestions).forEach(q => tmp.push(q));
     if (tmp.length < amount) {
       return [];
     }
@@ -74,7 +74,7 @@ export class QuestionsService {
     return ret;
   }
 
-  private static findOpenQuestionsList(category: string) {
+  private static findOpenQuestionsList(category: string, includeCustomQuestions) {
     switch (category) {
       case "firewall": {
         return ZbsEntry1.questions;
@@ -101,6 +101,9 @@ export class QuestionsService {
         return ZbsOldExam.openQuestions;
       }
       case "bsk": {
+        if (includeCustomQuestions) {
+          return BskExam.openQuestions.concat(BskExam.nonExamOpenQuestions);
+        }
         return BskExam.openQuestions;
       }
       case "wzr": {

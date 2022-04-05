@@ -38,6 +38,19 @@ input {
   cursor: pointer;
 }
 
+#customQuestions {
+  width: 24px;
+  height: 24px;
+}
+
+.customQuestionsCheckmark {
+}
+
+.customQuestionsCheckmark label {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
 .checkmark {
   height: 10px;
   width: 10px;

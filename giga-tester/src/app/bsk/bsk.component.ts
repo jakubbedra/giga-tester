@@ -10,6 +10,8 @@ import {MultipleChoiceQuestion} from "../questions/multiple-choice-question.mode
 })
 export class BskComponent implements OnInit {
 
+  includeCustomQuestions: boolean;
+
   showAnswers: boolean;
   pointsPerMultipleChoiceQuestion = 1;
   maxPointsMultipleChoiceQuestions = 15;
@@ -20,6 +22,7 @@ export class BskComponent implements OnInit {
   constructor(
     private questionsService: QuestionsService
   ) {
+    this.includeCustomQuestions = false;
     this.showAnswers = false;
   }
 
@@ -33,7 +36,7 @@ export class BskComponent implements OnInit {
   initExam() {
     this.multipleChoiceQuestions = this.questionsService.getRandomMultipleChoiceQuestions("bsk", 15)
       .map(this.mixQuestion);
-    this.openQuestions = this.questionsService.getRandomOpenQuestions("bsk", 2);
+    this.openQuestions = this.questionsService.getRandomOpenQuestions("bsk", 2, this.includeCustomQuestions);
   }
 
   onSelectAnswer(i: number, j: number) {
@@ -93,7 +96,7 @@ export class BskComponent implements OnInit {
     for (let i = 0; i < totalAnswers; i++) {
       let ind = Math.floor(Math.random() * answersStrings.length);
       question.answers.push(answersStrings[ind]);
-      if(correctAnswers.indexOf(answersStrings[ind]) > -1){
+      if (correctAnswers.indexOf(answersStrings[ind]) > -1) {
         question.correctAnswers.push(i);
       }
       answersStrings.splice(ind, 1);

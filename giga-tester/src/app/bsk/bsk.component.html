@@ -1,5 +1,9 @@
 <div id="exam">
   <h1>Pytania: </h1>
+  <div class="customQuestionsCheckmark">
+    <input id="customQuestions" type="checkbox"/>
+    <label for="customQuestions">wymyślone pytania</label>
+  </div>
   <h3 [hidden]="!showAnswers">Wynik: {{calculateScore()}}/{{maxPointsMultipleChoiceQuestions}}</h3>
   <ul>
     <li *ngFor="let q of multipleChoiceQuestions; let i = index">

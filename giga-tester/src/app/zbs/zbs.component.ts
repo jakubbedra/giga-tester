@@ -33,7 +33,7 @@ export class ZbsComponent implements OnInit {
     this.closedQuestions.forEach(q => {
       q.selected = -1;
     });
-    this.openQuestions = this.questionsService.getRandomOpenQuestions("zbs", 1);
+    this.openQuestions = this.questionsService.getRandomOpenQuestions("zbs", 1, false);
   }
 
   onSelectAnswer(i: number, j: number) {
