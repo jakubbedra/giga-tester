@@ -752,6 +752,7 @@ To taka sytuacja, kiedy różne wiadomości mają taką samą wartość funkcji 
 `),
   ];
 
+
   public static nonExamOpenQuestions: OpenQuestion[] = [
     new OpenQuestion(`
     Czym jest uwierzytelnianie?
@@ -769,7 +770,6 @@ To taka sytuacja, kiedy różne wiadomości mają taką samą wartość funkcji 
     Czym jest prywatność?
     `, `
     Prawo i/lub zdolność do ochrony danych osobistych, poszerzone o zdolność do zapobiegania wtargnięciom w osobistą przestrzeń.
-    Obejmuje to nie tylko dane osobiste, takie jak przebieg leczenia, historia pracy zawodowej, lokalizację i wykonywane czynności, lecz także również towarzyszące w tym inne osoby.
     `),new OpenQuestion(`
     Co to jest spójność?
     `, `

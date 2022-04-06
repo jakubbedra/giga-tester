@@ -39,6 +39,12 @@ export class BskComponent implements OnInit {
     this.openQuestions = this.questionsService.getRandomOpenQuestions("bsk", 2, this.includeCustomQuestions);
   }
 
+  onCheckCustomQuestions() {
+    this.includeCustomQuestions = !this.includeCustomQuestions;
+    console.log(this.includeCustomQuestions);
+    this.initExam();
+  }
+
   onSelectAnswer(i: number, j: number) {
     let ind = this.multipleChoiceQuestions[i].selected.indexOf(j);
     if (!this.showAnswers) {
