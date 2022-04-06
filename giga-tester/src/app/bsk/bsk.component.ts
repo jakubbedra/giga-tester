@@ -14,7 +14,7 @@ export class BskComponent implements OnInit {
 
   showAnswers: boolean;
   pointsPerMultipleChoiceQuestion = 1;
-  maxPointsMultipleChoiceQuestions = 15;
+  maxPointsMultipleChoiceQuestions = 25;
 
   multipleChoiceQuestions: MultipleChoiceQuestion[];
   openQuestions: OpenQuestion[];
@@ -34,9 +34,9 @@ export class BskComponent implements OnInit {
   }
 
   initExam() {
-    this.multipleChoiceQuestions = this.questionsService.getRandomMultipleChoiceQuestions("bsk", 15)
+    this.multipleChoiceQuestions = this.questionsService.getRandomMultipleChoiceQuestions("bsk", 25, this.includeCustomQuestions)
       .map(this.mixQuestion);
-    this.openQuestions = this.questionsService.getRandomOpenQuestions("bsk", 2, this.includeCustomQuestions);
+    this.openQuestions = this.questionsService.getRandomOpenQuestions("bsk", 5, this.includeCustomQuestions);
   }
 
   onCheckCustomQuestions() {

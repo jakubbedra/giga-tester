@@ -16,6 +16,7 @@ import {BskExam} from "../data/bsk/bsk-exam";
 import {WzrExam} from "../data/wzr/wzr-exam";
 import {JoKuchtaExam} from "../data/jo/jo-kuchta-exam";
 import {JoBowiszExam} from "../data/jo/jo-bowisz-exam";
+import {BskK1} from "../data/bsk/bsk-k1";
 
 @Injectable()
 export class QuestionsService {
@@ -41,10 +42,10 @@ export class QuestionsService {
     return ret;
   }
 
-  public getRandomMultipleChoiceQuestions(category: string, amount: number): MultipleChoiceQuestion[] {
+  public getRandomMultipleChoiceQuestions(category: string, amount: number, includeCustomQuestions: boolean): MultipleChoiceQuestion[] {
     let ret: MultipleChoiceQuestion[] = [];
     let tmp: MultipleChoiceQuestion[] = [];
-    let multipleChoiceQuestions = QuestionsService.findMultipleChoiceQuestionsList(category);
+    let multipleChoiceQuestions = QuestionsService.findMultipleChoiceQuestionsList(category, includeCustomQuestions);
     if (multipleChoiceQuestions.length < amount) {
       return [];
     }
@@ -102,9 +103,9 @@ export class QuestionsService {
       }
       case "bsk": {
         if (includeCustomQuestions) {
-          return BskExam.openQuestions.concat(BskExam.nonExamOpenQuestions);
+          return BskK1.openQuestions.concat(BskK1.nonExamOpenQuestions);
         }
-        return BskExam.openQuestions;
+        return BskK1.openQuestions;
       }
       case "wzr": {
         return WzrExam.questions;
@@ -134,10 +135,14 @@ export class QuestionsService {
     return [];
   }
 
-  private static findMultipleChoiceQuestionsList(category: string) {
+  private static findMultipleChoiceQuestionsList(category: string, includeCustomQuestions: boolean) {
     switch (category) {
       case "bsk": {
-        return BskExam.multipleChoiceQuestions;
+        if(includeCustomQuestions){
+          return BskK1.multipleChoiceQuestions.concat(BskK1.nonExamMultipleChoiceQuestions);
+        }
+//        return BskExam.multipleChoiceQuestions;
+        return BskK1.multipleChoiceQuestions;
       }
     }
     return [];
