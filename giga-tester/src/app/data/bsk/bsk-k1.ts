@@ -441,6 +441,50 @@ Które z poniższych sposobów łamania szyfrów są najpopularniejsze?
 `, `
 łamanie z wybranym szyfrogramem
 `], [0, 1]),
+    new MultipleChoiceQuestion(`
+Który z podanych algorytmów opiera swoje bezpieczeństwo na trudności obliczania dyskretnych logarytmów?
+`, [`
+RSA
+`, `
+ElGamal
+`, `
+Dijkstry
+`, `
+CBD
+`], [1]),
+    new MultipleChoiceQuestion(`
+Który z podanych algorytmów opiera swoje bezpieczeństwo na trudności faktoryzacji dużych liczb?
+`, [`
+RSA
+`, `
+ElGamal
+`, `
+Bubble sort
+`, `
+Ford-Fulkerson
+`], [0]),
+    new MultipleChoiceQuestion(`
+Które z podanych są sprawdzonymi rozwiązaniami do uzgadniania kluczy sesyjnych?
+`, [`
+Kerberos
+`, `
+escrowing
+`, `
+PGP (pretty good privacy)
+`, `
+protokół Neumana-Stubblebine'a
+`], [0, 3]),
+    new MultipleChoiceQuestion(`
+Które z podanych są sprawdzonymi rozwiązaniami do uzgadniania kluczy sesyjnych?
+`, [`
+RSA
+`, `
+SESAME
+`, `
+STS (station-to-station)
+`, `
+PKI
+`], [1, 2])
   ];
 
   public static nonExamOpenQuestions: OpenQuestion[] = [
@@ -496,19 +540,20 @@ Które z poniższych sposobów łamania szyfrów są najpopularniejsze?
     -> TWOFISH
     -> BLOWFISH
     -> DES
+    `),new OpenQuestion(`
+     Wymień cechy podpisu cyfrowego:
+    `, `
+    niepodrabialny, autentyczny, nie nadaje się do ponownego użycia, podpisany dokument nie jest modyfikowalny, nie można wyprzeć się podpisu
+    `),new OpenQuestion(`
+    Jak możemy chronić klucz prywatny?
+    `, `
+    Poprzez zaszyfrowanie go przy użyciu dobrego algorytmu blokowego, np.: AES, 3-DES, gdzie kluczem jest hash długiego hasła.
+    Zaszyfrowany klucz jest przechowywany na nośniku użytkownika (pendrive, laptop...)
+    `),new OpenQuestion(`
+    Co obejmuje zarządzane kluczami?
+    `, `
+    ich wytwarzanie, poświadczanie, uzgadnianie, wymianę, stosowanie i użytkowanie, przechowywani, w tym przekazywanie TTP i organom prawnym, niszczenie, unieważnianie
     `)/*,new OpenQuestion(`
-
-    `, `
-
-    `),new OpenQuestion(`
-
-    `, `
-
-    `),new OpenQuestion(`
-
-    `, `
-
-    `),new OpenQuestion(`
 
     `, `
 
