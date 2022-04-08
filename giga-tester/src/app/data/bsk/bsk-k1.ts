@@ -484,7 +484,62 @@ SESAME
 STS (station-to-station)
 `, `
 PKI
-`], [1, 2])
+`], [1, 2]),
+    new MultipleChoiceQuestion(`
+Serwery w PKI (Public Key Infrastructure), poświadczające klucze publiczne (wydające certyfikat) i przechowujące certyfikaty kluczy nieważnych (CRL) to:
+`, [`
+CA (Certification Authority)
+`, `
+RA (Registering Authority)
+`, `
+CRL (Certificate Revocation List)
+`, `
+PGP (Pretty Good Privacy)
+`], [0]),
+    new MultipleChoiceQuestion(`
+Serwery w PKI (Public Key Infrastructure), rejestrujące użytkowników (sprawdzające poprawność ich danych) to:
+`, [`
+RA (Registering Authority)
+`, `
+CA (Certification Authority)
+`, `
+PGP (Pretty Good Privacy)
+`, `
+CRL (Certificate Revocation List)
+`], [0]),
+    new MultipleChoiceQuestion(`
+Które z poniższych nie są cechami SDSI/SPKI:
+`, [`
+użytkownicy przechowują klucze lokalnie
+`, `
+występuje centralne repozytorium przechowywania kluczy
+`, `
+użytkownicy tworzą sieć równorzędnych CA
+`, `
+klucze mogą być podpisywane przez różne instytucje
+`], [1, 2]),
+    new MultipleChoiceQuestion(`
+Które z poniższych są cechami SDSI/SPKI:
+`, [`
+występują tylko dwa typy certyfikatów NC (Name Certificate) i AC (Authorization Certificate)
+`, `
+infrastruktura przystosowana do zarządzania rolami użytkowników
+`, `
+użytkownicy tworzą sieć równorzędnych CA
+`, `
+występuje wiele typów certyfikatów, między innymi NC (Name Certificate) i AC (Authorization Certificate)
+`], [0, 1]),
+    new MultipleChoiceQuestion(`
+Które z poniższych to cechy PGP:
+`, [`
+użytkownicy tworzą sieć równorzędnych CA
+`, `
+każdy użytkownik przechowuje lokalnie podpisane klucze publiczne innych użytkowników, którym ufa
+`, `
+każdy użytkownik przechowuje lokalnie niepodpisane klucze publiczne innych użytkowników
+`, `
+użytkownicy nie przechowują kluczy innych użytkowników
+`], [0, 1])
   ];
 
   public static nonExamOpenQuestions: OpenQuestion[] = [
@@ -534,7 +589,7 @@ PKI
     -> łamanie z wybranym szyfrogramem
     -> łamanie z wybranym kluczem
     `),new OpenQuestion(`
-    Wymieńznane ci szyfry blokowe symetryczne.
+    Wymień znane ci szyfry blokowe symetryczne.
     `, `
     -> AES
     -> TWOFISH
@@ -553,23 +608,23 @@ PKI
     Co obejmuje zarządzane kluczami?
     `, `
     ich wytwarzanie, poświadczanie, uzgadnianie, wymianę, stosowanie i użytkowanie, przechowywani, w tym przekazywanie TTP i organom prawnym, niszczenie, unieważnianie
+    `),new OpenQuestion(`
+      Czym jest certyfikat klucza publicznego?
+    `, `
+    struktura danych podpisana przez CA (Certification Authority) zawierająca:  klucz publiczny, identyfikator właściciela klucza, okres ważności, numer seryjny, dane wystawcy certyfikatu,  informacje o algorytmie podpisu, podpis cyfrowy poświadczającego itp.
+    `),new OpenQuestion(`
+    Czym jest weryfikacja certyfikatu?
+    `, `
+     sprawdzenie poprawności klucza, które wymaga znajomości klucza publicznego (certyfikatu) CA i zaufania do niego!
+    `),new OpenQuestion(`
+    Wymień rodzaje certyfikatów:
+    `, `
+    normalne; pośrednie (skrośne); wsteczne; chwilowe (czas ważności=0)
+    `),new OpenQuestion(`
+    Wymień 2 sposoby generowania kluczy w PKI.
+    `, `
+    1. CA generuje klucze; 2. Użytkownik sam generuje parę kluczy i dostarcza publiczny do CA
     `)/*,new OpenQuestion(`
-
-    `, `
-
-    `),new OpenQuestion(`
-
-    `, `
-
-    `),new OpenQuestion(`
-
-    `, `
-
-    `),new OpenQuestion(`
-
-    `, `
-
-    `),new OpenQuestion(`
 
     `, `
 
