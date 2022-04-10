@@ -66,7 +66,7 @@ confidentiality of the transferred data )
 `, `
 Unifikacji tylko użytkownika z punktu widzenia uprawnień (Unify user and application
 from the point of view of permissions )
-`], [0, 1, 3]),
+`], [3]),
     new MultipleChoiceQuestion(`
 Jakie jest prawdopodobieństwo przechwycenia danych przez osobę nieuprawnioną w
 przypadku użycia dowodu o wiedzy zerowej? (What is the probability of interception of
@@ -207,7 +207,7 @@ Szyfry blokowe asymetryczne (Asymmetrical block ciphers )
 Szyfry strumieniowe asymetryczne (Asymmetrical stream ciphers )
 `, `
 Szyfry strumieniowe symetryczne (Symmetrical stream ciphers )
-`], [0, 3]),
+`], [0]),
     new MultipleChoiceQuestion(`
 Na czym polega jednokierunkowość funkcji skrótu? (What is the principle of operation of
 the one-direction hash function?)
@@ -354,6 +354,95 @@ Stosując nadmiarowe podzespoły bazowe w serwerach (By using redundant
 components in servers )
 `], [0, 2, 3]),
     new MultipleChoiceQuestion(`
+W jakim celu w tzw bezpiecznych stacjach roboczych stosowane jest silne ekranowanie
+elektromagnetyczne? (What is the purpose of strong electromagnetic shields in the safe
+workstations?)
+`, [`
+W celu zwiększenia niezawodności stacji roboczych (To increase the reliability of the
+workstations )
+`, `
+W celu ochrony pracownika przed silnym polem elektromagnetycznym (To protect the
+operator against the electromagnetic field )
+`, `
+W celu zachowania wysokiej kompatybilności elektromagnetycznej ze sprzętem
+komercyjnym (To ensure the compatibility with the commercial solutions )
+`, `
+W celu uniemożliwienia wykrycia i przechwycenia emisji elektromagnetycznej (To make
+it impossible to intercept the electromagnetic emission )
+`], [3]),
+    new MultipleChoiceQuestion(`
+Gdzie nie spotyka się systemów detekcji intruzów? (Where we cannot see the IDS
+systems?) Wybierz jedną lub więcej: (wszędzie się spotyka, nic nie zaznaczamy)
+`, [`
+W obszarze sieci szkieletowej (In the area of the core network )
+`, `
+Po stronie serwerów WWW (On the side of the WWW servers )
+`, `
+Wewnątrz sieci lokalnych
+`, `
+W obrębie sieci za zaporą ogniową
+`], [0]),
+    new MultipleChoiceQuestion(`
+Które z zagrożeń/problemów nie dotyczy wektorów inicjujących? (Which threat is not
+related to the initializing vectors?)
+`, [`
+Licznikowy tryb wytwarzania wektorów inicjujących (Counter mode during generating the
+initialize vectors )
+`, `
+Losowość generowanych wektorów inicjujących (Randomness of generated initialize
+vectors )
+`, `
+Kolizja wektorów inicjujących (Collision of initializing vectors )
+`, `
+Znany początkowy stan generatora wektorów inicjujących (Known initial state of the
+initialize vector generator )
+`], [3]),
+    new MultipleChoiceQuestion(`
+Detekcja sygnaturowa w systemach detekcji intruzów polega na: (The signature detection
+in the IDS systems is based on:)
+`, [`
+Wykryciu anomalii w zwyczajnym działaniu systemu (Detection of anomalies in the user’s
+behaviour )
+`, `
+Wykryciu stopniowej zmiany zachowań użytkowników (Detection of small changes in the
+behaviour of the users )
+`, `
+Wykryciu charakterystycznych zachowań w działaniu systemu (Detection of characteristic
+behaviour )
+`, `
+Wykryciu uruchomienia programu z innymi uprawnieniami (Detection of executing the
+program with different rights )
+`], [2]),
+    new MultipleChoiceQuestion(`
+Jakie jest podstawowe założenie system detekcji intruzów? (What is the basic assumption
+of an intrusion detection system?)
+`, [`
+Możliwe jest wykrycie intruza (It is possible to discover an intruder)
+`, `
+System detekcji intruzów zajmuje minimalną część zasobów systemu (The IDS system
+uses only a minor part of the system resources)
+`, `
+System detekcji intruzów jest odporny na ataki typu Denial of Service (The IDS system is
+resistant to the Denial of Service attacks)
+`, `
+Włamania wykrywane są z prawdopodobieństwem bliskim 100% (The intruder can be
+detected with a probability close to 100%)
+`], [0]),
+    new MultipleChoiceQuestion(`
+Fałszywym odrzuceniem nazywamy (What is called as false detection?)
+`, [`
+Anulowanie działania w przypadku zaistnienia zdarzenia o wyższym priorytecie
+(Cancelling the action when a more critical threat occurs)
+`, `
+Zaprzestanie działań prewencyjnych w trakcie usuwania zagrożenia (Stopping the
+prevention during removing the threat consequences)
+`, `
+Odrzucenie zdarzenia będącego zagrożeniem (Rejection of an event that is a threat)
+`, `
+Odrzucenie zagrożenia niebędącym krytycznym zagrożeniem (Rejection of a threat that
+is not crucial)
+`], [3]),
+    new MultipleChoiceQuestion(`
 Wskaż rolę sprzężenia zwrotnego w procesie ewaluacji systemu IT (Indicate the role of a
 feedback in the process of IT system evaluation )
 `, [`
@@ -412,7 +501,7 @@ odszyfrowania wiadomości W asymetrycznej używa się różnych kluczy do tych p
     new OpenQuestion(`
 Na czym polega kolizja wektorów inicjujących?
 `, `
-To taka sytuacja, kiedy różne wiadomości mają taką samą wartość funkcji skrótu.
+Kolizja wektorów inicializujących polega na zaszyfrowaniu dwóch różnych wiadomości taką samą parą klucz+iv.
 `)
   ];
 
@@ -429,7 +518,7 @@ Unifikację użytkownika i aplikacji
 Unifikacji tylko użytkownika z punktu widzenia uprawnień
 `, `
 Kontrolę dostępu bazującą na protokołach uwierzytelniania Kerberos z pewnymi rozszerzeniami na rzecz bezpieczeństwa pozwalającymi na użycie kryptografii z kluczem publicznym.
-`], [0, 2, 4]),
+`], [0, 1, 2, 4]),
     new MultipleChoiceQuestion(`
 Które z poniższych sposobów łamania szyfrów są najpopularniejsze?
 `, [`
@@ -539,7 +628,29 @@ każdy użytkownik przechowuje lokalnie podpisane klucze publiczne innych użytk
 każdy użytkownik przechowuje lokalnie niepodpisane klucze publiczne innych użytkowników
 `, `
 użytkownicy nie przechowują kluczy innych użytkowników
-`], [0, 1])
+`], [0, 1]),
+    new MultipleChoiceQuestion(`
+Podczas analizy ryzyka zdarzeniem ignorowanym określamy…
+`, [`
+Zdarzenie o niskim prawdopodobieństwie wystąpienia i wysokich konsekwencjach
+`, `
+Zdarzenie o niskim prawdopodobieństwie wystąpienia i średnich konsekwencjach
+`, `
+Zdarzenie o wysokim prawdopodobieństwie wystąpienia i niskich konsekwencjach
+`, `
+Zdarzenie prawie niemożliwe o niskich konsekwencjach
+`], [3]),
+    new MultipleChoiceQuestion(`
+Które z linii przesyłowych są ciężkie do podsłuchania?
+`, [`
+Połączenia radiowe
+`, `
+Linie optyczne
+`, `
+Łącza satelitarne
+`, `
+Transmisje dalekosiężne
+`], [2, 3])
   ];
 
   public static nonExamOpenQuestions: OpenQuestion[] = [
@@ -624,19 +735,31 @@ użytkownicy nie przechowują kluczy innych użytkowników
     Wymień 2 sposoby generowania kluczy w PKI.
     `, `
     1. CA generuje klucze; 2. Użytkownik sam generuje parę kluczy i dostarcza publiczny do CA
-    `)/*,new OpenQuestion(`
-
-    `, `
-
     `),new OpenQuestion(`
-
+    Czym jest Polityka Bezpieczeństwa (PB)?
     `, `
-
+    Plan działania (dokument), zbiór kluczowych definicji mówiących o tym, co jak i kiedy i dlaczego chcemy chronić w obrębie instytucji, firmy, systemu komputerowego.
     `),new OpenQuestion(`
-
+    Wymień etapy realizacji Polityki Bezpieczeństwa:
     `, `
-
-    `)*/
+    Planowanie, analiza ryzyka, analiza kosztów względem korzyści, tworzenia PB na miarę zapotrzebowania, wprowadzenie PB w życie
+    `),new OpenQuestion(`
+    Co bierzemy pod uwagę podczas tworzenia Polityki Bezpieczeństwa.
+    `, `
+    ISO/IEC 27002; COBIT (Control Objectives for Information and related Technology); CERT-CC; RFC 2196
+    `),new OpenQuestion(`
+    Wymień fazy audytu.
+    `, `
+1. planowanie i zapoznanie się z obszarem audytu; 2. ocena projektowanych mechanizmów kontrolnych; 3. ocena zgodności projektu ze stanem rzeczywistym; 4. raport i działania proaudytowe;
+    `),new OpenQuestion(`
+    Wymień techniki audytu
+    `, `
+    lista punktów pomocniczych LPP; CCAT Computer Assisted Audit Techniques; Oprogramowanie wspomagające audyt, LPP i ocenę np. skanery; audyt oprogramowania; kontrola nieszczelności sieci komputerowej; testy penetracyjne; inspekcja logów;
+    `),new OpenQuestion(`
+    Wymień role w procesie bezpieczeństwa wg NIST:
+    `, `
+    kierownik akredytujący (authorizing official); właściciel systemu informatycznego (information system owner); administrator bezpieczeństwa (information system security officer); audytor (certification agent); reprezentant użytkowników (user representative)
+    `)
   ];
 
 }

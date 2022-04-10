@@ -4,37 +4,6 @@ import {OpenQuestion} from "../../questions/open-question.model";
 export class BskK2 {
   public static multipleChoiceQuestions: MultipleChoiceQuestion[] = [
     new MultipleChoiceQuestion(`
-Jakie jest podstawowe założenie system detekcji intruzów? (What is the basic assumption
-of an intrusion detection system?)
-`, [`
-Możliwe jest wykrycie intruza (It is possible to discover an intruder)
-`, `
-System detekcji intruzów zajmuje minimalną część zasobów systemu (The IDS system
-uses only a minor part of the system resources)
-`, `
-System detekcji intruzów jest odporny na ataki typu Denial of Service (The IDS system is
-resistant to the Denial of Service attacks)
-`, `
-Włamania wykrywane są z prawdopodobieństwem bliskim 100% (The intruder can be
-detected with a probability close to 100%)
-`], [0, 2]),
-    new MultipleChoiceQuestion(`
-Detekcja sygnaturowa w systemach detekcji intruzów polega na: (The signature detection
-in the IDS systems is based on:)
-`, [`
-Wykryciu anomalii w zwyczajnym działaniu systemu (Detection of anomalies in the user’s
-behaviour )
-`, `
-Wykryciu stopniowej zmiany zachowań użytkowników (Detection of small changes in the
-behaviour of the users )
-`, `
-Wykryciu charakterystycznych zachowań w działaniu systemu (Detection of characteristic
-behaviour )
-`, `
-Wykryciu uruchomienia programu z innymi uprawnieniami (Detection of executing the
-program with different rights )
-`], [2]),
-    new MultipleChoiceQuestion(`
 Atak typu Man in the Middle w sieciach typu 802.11 polega na: (Man in the middle attack in
 the 802.11 networks is based on:
 `, [`
@@ -77,20 +46,6 @@ DAC
 `, `
 RBAC
 `], [1, 2, 3]),
-    new MultipleChoiceQuestion(`
-Fałszywym odrzuceniem nazywamy (What is called as false detection?)
-`, [`
-Anulowanie działania w przypadku zaistnienia zdarzenia o wyższym priorytecie
-(Cancelling the action when a more critical threat occurs)
-`, `
-Zaprzestanie działań prewencyjnych w trakcie usuwania zagrożenia (Stopping the
-prevention during removing the threat consequences)
-`, `
-Odrzucenie zdarzenia będącego zagrożeniem (Rejection of an event that is a threat)
-`, `
-Odrzucenie zagrożenia niebędącym krytycznym zagrożeniem (Rejection of a threat that
-is not crucial)
-`], [3]),
     new MultipleChoiceQuestion(`
 Który ze standardów nie dotyczy sieci radiowych Wi-Fi/Bluetooth/WiMax? (Which
 standard is not related to WiFi/Bluetooth or WiMax networks?)
@@ -238,22 +193,6 @@ Nie stosuje się szyfrowania wzajemnego uwierzytelnienia (A mutual authenticatio
 used )
 `], [0, 1]),
     new MultipleChoiceQuestion(`
-Które z zagrożeń/problemów nie dotyczy wektorów inicjujących? (Which threat is not
-related to the initializing vectors?)
-`, [`
-Licznikowy tryb wytwarzania wektorów inicjujących (Counter mode during generating the
-initialize vectors )
-`, `
-Losowość generowanych wektorów inicjujących (Randomness of generated initialize
-vectors )
-`, `
-Kolizja wektorów inicjujących (Collision of initializing vectors ) (przecież to akurat
-dotyczy, nie?)
-`, `
-Znany początkowy stan generatora wektorów inicjujących (Known initial state of the
-initialize vector generator )
-`], [1]),
-    new MultipleChoiceQuestion(`
 Jaka trudność występuje podczas implementacji modelu RBAC? (What is the difficulty in
 the implementation of the RBAC model?)
 `, [`
@@ -292,23 +231,6 @@ Weryfikacja tożsamości tylko nadawcy wiadomości (Verification only the sender
 `, `
 Kontrola spójności wiadomości (Consistency of the e-mail )
 `], [1, 2]),
-    new MultipleChoiceQuestion(`
-W jakim celu w tzw bezpiecznych stacjach roboczych stosowane jest silne ekranowanie
-elektromagnetyczne? (What is the purpose of strong electromagnetic shields in the safe
-workstations?)
-`, [`
-W celu zwiększenia niezawodności stacji roboczych (To increase the reliability of the
-workstations )
-`, `
-W celu ochrony pracownika przed silnym polem elektromagnetycznym (To protect the
-operator against the electromagnetic field )
-`, `
-W celu zachowania wysokiej kompatybilności elektromagnetycznej ze sprzętem
-komercyjnym (To ensure the compatibility with the commercial solutions )
-`, `
-W celu uniemożliwienia wykrycia i przechwycenia emisji elektromagnetycznej (To make
-it impossible to intercept the electromagnetic emission )
-`], [0, 2]),
     new MultipleChoiceQuestion(`
 W jakim celu stosowane jest tunelowanie SSL/TSL albo połączenia VPN? (Why we use the
 SSL/TSL or VPN connections?) Wybierz jedną lub więcej:
