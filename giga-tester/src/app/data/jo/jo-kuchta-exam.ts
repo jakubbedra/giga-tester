@@ -1,6 +1,10 @@
 import {OpenQuestion} from "../../questions/open-question.model";
+import {ClosedQuestion} from "../../questions/closed-question.model";
 
 export class JoKuchtaExam {
+  public static closedQuestions: ClosedQuestion[] = [
+
+  ];
   public static openQuestions: OpenQuestion[] = [
     new OpenQuestion(`
 Czego uczą nas wypadki z Therac-25 w latach 1980 w USA i Kanadzie?
