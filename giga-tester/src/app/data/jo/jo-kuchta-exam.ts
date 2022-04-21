@@ -141,12 +141,23 @@ Czego uczy nas wypadek sondy marsjańskiej Mars Orbiter?
       [`
 Przyczyną awarii jest często splot wielu nieprzewidywalnych czynników.
 `, `
-Rzeczy oczywiste nie zawsze są zgodne pomiędzy stronami.
+Rzeczy oczywiste nie zawsze są takym samym pomiędzy stronami.
 `, `
 Dla zapewnienia bezawaryjnej pracy trzeba dokładnie testować oprogramowanie w środowisku docelowym.
 `, `
 Przyczyną każdej usterki w oprogramowaniu jest błąd programisty.
-`], 1)
+`], 1),
+    new ClosedQuestion(`
+Jaka jest różnica między atrybutami a metrykami?
+`,[`
+Atrybuty są cechami jakościowymi produktu, świadczą o jego wartości dla użytkownika, a metryki są cechami ilościowymi produktu, określają sposób oceny poszczególnych.
+`, `
+Metryki są cechami jakościowymi produktu, świadczą o jego wartości dla użytkownika, a atrybuty są cechami ilościowymi produktu, określają sposób oceny poszczególnych.
+`, `
+Metryki i atrybuty to w zasadzie to samo.
+`, `
+Metryki i atrybuty nie są ze sobą powiązane.
+`], 0)
   ];
 
   public static customOpenQuestions: OpenQuestion[] = [
@@ -163,29 +174,58 @@ Wymień 2 możliwe rozumowania pojęcia jakości i powiedz na czym polega różn
 Różnica jest taka, że w pierwszej definicji mówimy o udokumentowanych wymaganiach. W drugiej natomiast, myślymy również o wymaganiach, które nie są udokumentowane, gdyż np.: były one dla klienta oczywiste. Bądź klientem nie był użytkownik systemu, tylko np.: dyrektor organizacji.
     `),
     new OpenQuestion(`
-
+Wymień problemy związane z oceną jakości:
     `,`
-
+Problemy z oceną jakości:
+-> jakość jest pojęciem złożonym;
+-> pomiar jest często subiektywny;
+-> często brak punktu odniesienia;
+-> problem z normalizacją wyniku pomiaru;
+-> wagi mogą być arbitralnie ustalone;
+-> problem z oceną wyniku;
     `),
     new OpenQuestion(`
-
+O czym mówi zasada 1:10 i z czego wynika?
     `,`
-
+Koszt wprowadzenia zmian w systemie rośnie 10x z każdą kolejną fazą rozwoju. Wynika to z tego że w każdej kolejnej fazie musimy wykonać o wiele więcej czynności. Przykładowo w fazie definiowania dokonujemy zmiany w jednym miejscu. W kolejnej fazie musimy uwzględnić tą zmianę jeszcze w innych miejscach, przykładowo: we wszystkich funkcjach odnoszących się do danego elementu uległego zmianie. W fazie utrzymywania dochodzą również koszty zaprzestania działania systemu w trakcie maintenance break (wyłączenie systemu w celu wprowadzenia jego nowej wersji).
     `),
     new OpenQuestion(`
-
+Co to jest SQA? Wymień 5 aktywności SQA.
     `,`
-
+SQA (Software Quality Assurance) - planowy i usystematyzowany zbiór akcji wymaganych dla zapewnienia jakości w oprogramowaniu.
+Aktywności SQA: stosowanie metod technicznych; przeprowadzanie formalnych przeglądów technicznych (FTR); testowanie oprogramowania; wymuszanie standardów; kontrolowanie zmian; wykonywanie pomiarów; zapisywanie i raportowanie;
     `),
     new OpenQuestion(`
-
+Co to jest FTR? Wymień jego cele i rodzaje.
     `,`
-
+    FTR - Formal Technical Review, formalny przegląd techniczny;
+Cele FTR:
+- wykrycie błędów w funkcjach, logice lub implementacji oprogramowania;
+- sprawdzenie czy przeglądane oprogramowanie jest zgodne z wymaganiami;
+- upewnienie się, że reprezentacja oprogramowania jest zgodna z wcześniej zdefiniowanymi standardami;
+- uzyskanie oprogramowania opracowanego w jednolity sposób;
+- sprawienie by projekty były łatwiejsze w utrzymaniu;
+Rodzaje FTR:
+- przegląd (walkthrough) - przejrzenie treści dokumentu zgodnie z jego logicznym uporządkowaniem (np.: odczytanie dokumentu);
+- inspekcje - przejrzenie dokumentu zgodnie z listą kontrolną;
     `),
     new OpenQuestion(`
-
+Co to jest TQM? Wymień 5 zasad TQM.
     `,`
-
+TQM - Total Quality Management - zbiór działań sprawiających, że każdy osobnik w firmie od dyrektora do sprzątaczki rozumie jakie są oczekiwania klientów tej organizacji i dąży do spełnienia tych oczekiwań;
+Naczelne zasady TQM:
+- jakość może i musi być zarządzana;
+- każdy ma swojego klienta i swojego dostawcę;
+- procesy, a nie ludzie stanowią problem;
+- każdy pracownik jest odpowiedzialny za jakość;
+- problemom trzeba zapobiegać, a nie tylko rozwiązywać;
+- jakość musi być mierzona;
+- poprawa jakości musi być stała;
+- standard jakości jest wolny od defektów;
+- cele są oparte o wymagania, a nie negocjowane;
+- koszty są ukryte w całym cyklu życia, a nie tylko w wytwarzaniu;
+- kierownictwo musi być zaangażowane i musi przewodzić;
+- działania na rzecz poprawy jakości muszą być planowane i organizowane;
     `)
   ];
 
