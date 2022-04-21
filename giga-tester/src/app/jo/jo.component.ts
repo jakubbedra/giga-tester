@@ -10,6 +10,8 @@ import {ClosedQuestion} from "../questions/closed-question.model";
 })
 export class JoComponent implements OnInit {
 
+  includeCustomQuestions: boolean;
+
   maxPointsClosedKuchtaQuestions: number;
   closedQuestions: ClosedQuestion[];
   openQuestions: OpenQuestion[];
@@ -19,6 +21,7 @@ export class JoComponent implements OnInit {
   constructor(
     private questionsService: QuestionsService
   ) {
+    this.includeCustomQuestions = false;
     this.maxPointsClosedKuchtaQuestions = 7;
     this.closedQuestions = [];
     this.openQuestions = [];
@@ -63,6 +66,12 @@ export class JoComponent implements OnInit {
       }
     }
     return score;
+  }
+
+  onCheckCustomQuestions() {
+    this.includeCustomQuestions = !this.includeCustomQuestions;
+    console.log(this.includeCustomQuestions);
+    this.initEntry();
   }
 
   private mixQuestion(question): ClosedQuestion {

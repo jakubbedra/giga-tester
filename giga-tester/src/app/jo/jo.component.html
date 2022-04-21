@@ -7,6 +7,7 @@
 </div>
 
 <div id="entry" *ngIf="selectedExam==='jo-kuchta'">
+  <button (click)="onCheckCustomQuestions()">wymyślone pytania: {{includeCustomQuestions == true ? "WŁĄCZONE" : "WYŁĄCZONE"}}</button>
   <h1>Pytania:</h1>
   <h3 [hidden]="!showAnswers">Wynik z zamkniętych: {{calculateScore()}}/{{maxPointsClosedKuchtaQuestions}}</h3>
   <ul>

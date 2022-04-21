@@ -133,4 +133,20 @@ Jakie praktyki w metodykach zwinnych powinno się stosować do zapewnienia jako�
 -proces zarządzania projektami
 `)
   ];
+
+  public static customClosedQuestions: ClosedQuestion[] = [
+    new ClosedQuestion(`
+Czego uczy nas wypadek sondy marsjańskiej Mars Orbiter?
+`,
+      [`
+Przyczyną awarii jest często splot wielu nieprzewidywalnych czynników.
+`, `
+Rzeczy oczywiste nie zawsze są zgodne pomiędzy stronami.
+`, `
+Dla zapewnienia bezawaryjnej pracy trzeba dokładnie testować oprogramowanie w środowisku docelowym.
+`, `
+Przyczyną każdej usterki w oprogramowaniu jest błąd programisty.
+`], 1)
+  ];
+
 }
