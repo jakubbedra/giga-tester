@@ -3,6 +3,31 @@ import {OpenQuestion} from "../../questions/open-question.model";
 export class ZbsEntry4 {
   public static questions: OpenQuestion[] = [
     new OpenQuestion(`
+Który format danych nie jest domyślnie dostępny jako strumień wejściowy (input) w systemie Graylog?
+`, `
+XML
+`),
+    new OpenQuestion(`
+Domyślny numer portu dla usługi syslog to:
+`, `
+514
+`),
+    new OpenQuestion(`
+Formatem wprowadzonym w systemie Graylog i dedykowanym do przesyłania informacji o zdarzeniach jest:
+`, `
+Graylog Extended Log Format
+`),
+    new OpenQuestion(`
+Silnikiem baz danych dla systemu Graylog jest:
+`, `
+MongoDB
+`),
+    new OpenQuestion(`
+[placeholder]
+`, `
+...
+`)/*,
+    new OpenQuestion(`
 W przypadku protokołu SNMP hierarchiczna baza danych opisująca parametry konfiguracji urządzenia jest udostępniana poprzez struktury:
 `, `
 MIB
@@ -56,6 +81,6 @@ Ramka typu TRAP generowana jest poprzez zarządzane urządzenie i sygnalizuje st
 W przypadku której wersji SNMP dostępne jest szyfrowanie przesyłanych danych?
 `, `
 SNMPv3
-`)
+`)*/
   ];
 }
