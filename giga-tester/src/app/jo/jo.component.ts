@@ -34,10 +34,10 @@ export class JoComponent implements OnInit {
   }
 
   initEntry(): void {
-    this.closedQuestions = this.questionsService.getRandomClosedQuestions(this.selectedExam, 6)
+    this.closedQuestions = this.questionsService.getRandomClosedQuestions(this.selectedExam, 7, this.includeCustomQuestions)
       .map(this.mixQuestion);
     this.showAnswers = false;
-    this.openQuestions = this.questionsService.getRandomOpenQuestions(this.selectedExam, 6, false);
+    this.openQuestions = this.questionsService.getRandomOpenQuestions(this.selectedExam, 6, this.includeCustomQuestions);
     if (this.closedQuestions != null && this.openQuestions !== null) {
       this.clearQuestions();
     }

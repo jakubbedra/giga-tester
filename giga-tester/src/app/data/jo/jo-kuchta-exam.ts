@@ -149,4 +149,44 @@ Przyczyną każdej usterki w oprogramowaniu jest błąd programisty.
 `], 1)
   ];
 
+  public static customOpenQuestions: OpenQuestion[] = [
+    new OpenQuestion(`
+ Co można powiedzieć o skali kosztów błędów?
+`, `
+⅓ błędów można by z łatwością uniknąć stosując odpowiednie normy jakości, 80% kosztów opracowania jest przeznaczonych na wykrywanie i usuwanie błędów a nie na samo tworzenie systemu. Stoi za tym złożoność oprogramowania (wpizdu kodu, rzędu 10^6 linii).
+`),
+    new OpenQuestion(`
+Wymień 2 możliwe rozumowania pojęcia jakości i powiedz na czym polega różnica między nimi.
+    `,`
+-> Stopień w jakim system/komponent/proces/obiekt spełnia wyspecyfikowane wymagania;
+-> Stopień w jakim system/komponent/proces/obiekt spełnia oczekiwania klienta lub użytkownika;
+Różnica jest taka, że w pierwszej definicji mówimy o udokumentowanych wymaganiach. W drugiej natomiast, myślymy również o wymaganiach, które nie są udokumentowane, gdyż np.: były one dla klienta oczywiste. Bądź klientem nie był użytkownik systemu, tylko np.: dyrektor organizacji.
+    `),
+    new OpenQuestion(`
+
+    `,`
+
+    `),
+    new OpenQuestion(`
+
+    `,`
+
+    `),
+    new OpenQuestion(`
+
+    `,`
+
+    `),
+    new OpenQuestion(`
+
+    `,`
+
+    `),
+    new OpenQuestion(`
+
+    `,`
+
+    `)
+  ];
+
 }

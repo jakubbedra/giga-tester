@@ -26,7 +26,7 @@ export class RpiComponent implements OnInit {
   }
 
   initExam() {
-    this.closedQuestions = this.questionsService.getRandomClosedQuestions("rpi", 10)
+    this.closedQuestions = this.questionsService.getRandomClosedQuestions("rpi", 10, false)
       .map(this.mixQuestion);
   }
 

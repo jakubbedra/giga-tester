@@ -24,10 +24,10 @@ export class QuestionsService {
   constructor() {
   }
 
-  public getRandomClosedQuestions(category: string, amount: number): ClosedQuestion[] {
+  public getRandomClosedQuestions(category: string, amount: number, includeCustomQuestions: boolean): ClosedQuestion[] {
     let ret: ClosedQuestion[] = [];
     let tmp: ClosedQuestion[] = [];
-    let closedQuestions = QuestionsService.findClosedQuestionsList(category);
+    let closedQuestions = QuestionsService.findClosedQuestionsList(category, includeCustomQuestions);
     if (closedQuestions.length < amount) {
       return [];
     }
@@ -111,6 +111,9 @@ export class QuestionsService {
         return WzrExam.questions;
       }
       case "jo-kuchta": {
+        if(includeCustomQuestions){
+          return JoKuchtaExam.openQuestions.concat(JoKuchtaExam.customOpenQuestions);
+        }
         return JoKuchtaExam.openQuestions;
       }
       case "jo-bowisz": {
@@ -120,7 +123,7 @@ export class QuestionsService {
     return [];
   }
 
-  private static findClosedQuestionsList(category: string) {
+  private static findClosedQuestionsList(category: string, includeCustomQuestions: boolean) {
     switch (category) {
       case "zbs": {
         return ZbsOldExam.closedQuestions;
@@ -132,6 +135,9 @@ export class QuestionsService {
         return ZfiQuizes.closedQuestions;
       }
       case "jo-kuchta": {
+        if(includeCustomQuestions){
+          return JoKuchtaExam.closedQuestions.concat(JoKuchtaExam.customClosedQuestions);
+        }
         return JoKuchtaExam.closedQuestions;
       }
     }

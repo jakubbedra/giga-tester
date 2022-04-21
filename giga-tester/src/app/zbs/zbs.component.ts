@@ -28,7 +28,7 @@ export class ZbsComponent implements OnInit {
   }
 
   initExam() {
-    this.closedQuestions = this.questionsService.getRandomClosedQuestions("zbs", 10)
+    this.closedQuestions = this.questionsService.getRandomClosedQuestions("zbs", 10, false)
       .map(this.mixQuestion);
     this.closedQuestions.forEach(q => {
       q.selected = -1;

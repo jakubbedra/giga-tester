@@ -26,7 +26,7 @@ export class ZfiComponent implements OnInit {
   }
 
   initExam() {
-    this.closedQuestions = this.questionsService.getRandomClosedQuestions("zfi", 5)
+    this.closedQuestions = this.questionsService.getRandomClosedQuestions("zfi", 5, false)
       .map(this.mixQuestion);
     this.closedQuestions.forEach(q => {
       q.selected = -1;
