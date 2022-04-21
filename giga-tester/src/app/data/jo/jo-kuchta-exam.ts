@@ -3,44 +3,94 @@ import {ClosedQuestion} from "../../questions/closed-question.model";
 
 export class JoKuchtaExam {
   public static closedQuestions: ClosedQuestion[] = [
+    new ClosedQuestion(`
+Czego uczą nas wypadki z Therac-25 w latach 1980 w USA i Kanadzie?
+`,
+      [`
+Przyczyną awarii jest często splot wielu nieprzewidywalnych czynników.
+`, `
+Dobre szkolenie personelu może zapobiec awariom systemu.
+`, `
+Dla zapewnienia bezawaryjnej pracy trzeba dokładnie testować oprogramowanie w środowisku docelowym.
+`, `
+Przyczyną każdej usterki w oprogramowaniu jest błąd programisty.
+`], 0),
+    new ClosedQuestion(`
+Metoda Saaty'ego najlepiej się sprawdza:
+`,
+      [`
+tam, gdzie nie mamy jednego wzorca jakości.
+`, `
+tam, gdzie liczba ocenianych rozwiązań jest duża.
+`, `
+tam, gdzie musimy zastosować miary obiektowe.
+`, `
+tam, gdzie liczba ocenianych cech jest duża.
+`], 0),
+    new ClosedQuestion(`
+We wzorze na poprawność implementacji Pi=1-A/B liczba w mianowniku (B) oznacza:
+`,
+      [`
+liczbę zaimplementowanych wymagań
+`, `
+liczbę poprawnie zaimplementowanych wymagań.
+`, `
+liczbę wszystkich wymagań.
+`, `
+liczbę niepoprawnie zaimplementowanych wymagań.
+`], 0),
+    new ClosedQuestion(`
+Czym różni się konfigurowalność od modyfikacji systemu oprogramowania?
+`,
+      [`
+konfigurowalność określa łatwość zmiany funkcjonalności systemu, a modyfikowalność łatwość zmiany wyglądu systemu
+`, `
+wszystkim, konfigurowalność i modyfikowalność to dwa zupełnie różne pojęcia.
+`, `
+modyfikowalność określa łatwośćzmiany funkcjonalności systemu, a konfigurowalność łatwość zmiany wyglądu systemu.
+`, `
+niczym, konfigurowalność i modyfikowalność to właściwie to samo.
+`], 0),
+    new ClosedQuestion(`
+Wykrywanie i usuwanie błędów we wcześniejszych fazach wytwarzania oprogramowania jest bardziej opłacalne przede wszystkim ze względu na:
+`,
+      [`
+zmniejszenie liczby błędów wywoływanych w kolejnych fazach.
+`, `
+zmniejszenie współczynnika wzmocnienia liczby błędów.
+`, `
+niższy koszt.
+`, `
+konieczność zapewnienia łatwości utrzymania oprogramowania.
+`], 0),
+    new ClosedQuestion(`
+Poziom dojrzałości w CMM, dla którego standard jakości jest optymalizowany, to poziom:
+`,
+      [`
+5
+`, `
+4
+`, `
+2
+`, `
+3
+`], 0),
+    new ClosedQuestion(`
+System jakości ISO 9001 zapewnia przede wszystkim:
+`,
+      [`
+zwiększenie zaufania klientów do produktów lub usług przedsiębiorstwa.
+`, `
+zauważalne podniesienie jakości produktów lub usług przedsiębiorstwa.
+`, `
+zwiększenie udziału przedsiębiorstwa w rynku.
+`, `
+poprawę organizacji pracy w przedsiębiorstwie.
+`], 0)
 
   ];
+
   public static openQuestions: OpenQuestion[] = [
-    new OpenQuestion(`
-Czego uczą nas wypadki z Therac-25 w latach 1980 w USA i Kanadzie?
-`, `
-Przyczyną awarii jest często splot wielu nieprzewidywalnych czynników.
-`),
-    new OpenQuestion(`
-Metoda Saaty'ego najlepiej się sprawdza:
-`, `
-tam, gdzie nie mamy jednego wzorca jakości.
-`),
-    new OpenQuestion(`
-We wzorze na poprawność implementacji Pi=1-A/B liczba w mianowniku (B) oznacza:
-`, `
-liczbę zaimplementowanych wymagań
-`),
-    new OpenQuestion(`
-Czym różni się konfigurowalność od modyfikacji systemu oprogramowania?
-`, `
-konfigurowalność określa łatwość zmiany funkcjonalności systemu, a modyfikowalność łatwość zmiany wyglądu systemu
-`),
-    new OpenQuestion(`
-Wykrywanie i usuwanie błędów we wcześniejszych fazach wytwarzania oprogramowania jest bardziej opłacalne przede wszystkim ze względu na:
-`, `
-zmniejszenie liczby błędów wywoływanych w kolejnych fazach
-`),
-    new OpenQuestion(`
-Poziom dojrzałości w CMM, dla którego standard jakości jest optymalizowany, to poziom:
-`, `
-5
-`),
-    new OpenQuestion(`
-System jakości ISO 9001 zapewnia przede wszystkim:
-`, `
-zwiększenie zaufania klientów do produktów lub usług przedsiębiorstwa
-`),
     new OpenQuestion(`
 Co mierzą punkty funkcyjne i czym się różnią od punktów funkcjonalnych?
 `, `

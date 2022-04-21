@@ -131,6 +131,9 @@ export class QuestionsService {
       case "zfi": {
         return ZfiQuizes.closedQuestions;
       }
+      case "jo-kuchta": {
+        return JoKuchtaExam.closedQuestions;
+      }
     }
     return [];
   }

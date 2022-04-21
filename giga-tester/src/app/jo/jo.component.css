@@ -65,6 +65,42 @@ input, textarea {
   white-space: pre-line;
 }
 
+
+.closed-answer {
+  transition: all 0.3s ease 0s;
+  font-size: 24px;
+  cursor: pointer;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.closed-answer:hover {
+  color: #bb86fc;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.selected {
+  color: #bb86fc;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.correct-answer {
+  color: lawngreen;
+}
+
+.wrong-answer {
+  color: red;
+}
+
+li p {
+  font-size: 24px;
+}
+
+ul {
+  width: 100%;
+}
+
+
 @media only screen and (max-width: 768px) {
   #info {
     width: 80%;
@@ -73,11 +109,21 @@ input, textarea {
     font-size: 300%;
   }
 
-  #exam {
+  #entry {
     width: 80%;
     justify-content: center;
     margin: 0 auto;
     font-size: 300%;
+  }
+
+  #selection {
+    width: 80%;
+    font-size: 240%;
+  }
+
+  select {
+    height: 140%;
+    font-size: 200%;
   }
 
   .closed-answer {

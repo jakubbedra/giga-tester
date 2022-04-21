@@ -1,17 +1,35 @@
 <div id="selection">
   <label for="entries">Wybierz kolosa:</label>
-  <select name="entries" id="entries" (change)="initEntry()" [(ngModel)]="selectedEntry">
+  <select name="entries" id="entries" (change)="initEntry()" [(ngModel)]="selectedExam">
     <option value="jo-kuchta">Kuchta</option>
     <option value="jo-bowisz">Bowisz</option>
   </select>
 </div>
 
-<div id="entry" *ngIf="selectedEntry!==''">
+<div id="entry" *ngIf="selectedExam==='jo-kuchta'">
   <h1>Pytania:</h1>
+  <h3 [hidden]="!showAnswers">Wynik z zamkniętych: {{calculateScore()}}/{{maxPointsClosedKuchtaQuestions}}</h3>
   <ul>
-    <li *ngFor="let q of questions; let i = index">
+    <li *ngFor="let q of closedQuestions; let i = index">
       <p>
         {{i + 1}}. {{q.content}}
+      </p>
+      <div *ngFor="let a of q.answers; let j = index" class="closed-answer" (click)="onSelectAnswer(i, j)"
+           [ngClass]="{'selected': closedQuestions[i].selected === j}">
+        <span
+          [ngClass]="{
+          'correct-answer': closedQuestions[i].correctAnswer === j && showAnswers,
+          'wrong-answer': closedQuestions[i].selected === j && closedQuestions[i].correctAnswer !== j && showAnswers
+          }">
+          {{a}}
+        </span>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li *ngFor="let q of openQuestions; let i = index">
+      <p>
+        {{i + 8}}. {{q.content}}
       </p>
       <p *ngIf="showAnswers" class="answer">
         {{q.correctAnswer}}
@@ -21,4 +39,7 @@
   </ul>
   <button *ngIf="!showAnswers" (click)="onSubmit()">Sprawdz</button>
   <button *ngIf="showAnswers" (click)="onNewEntry()">Nowy kolos</button>
+</div>
+<div id="bowisz" *ngIf="selectedExam==='jo-bowisz'">
+  Coming soon...
 </div>
