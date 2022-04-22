@@ -1,0 +1,35 @@
+<div id="exam">
+  <h1>Pytania zamknięte:</h1>
+  <h3 [hidden]="!showAnswers">Wynik: {{calculateScore()}}/{{maxPointsClosedQuestions}}</h3>
+  <ul>
+    <li *ngFor="let q of closedQuestions; let i = index">
+      <p>
+        {{i + 1}}. {{q.content}}
+      </p>
+      <div *ngFor="let a of q.answers; let j = index" class="closed-answer" (click)="onSelectAnswer(i, j)"
+           [ngClass]="{'selected': closedQuestions[i].selected === j}">
+        <span
+          [ngClass]="{
+          'correct-answer': closedQuestions[i].correctAnswer === j && showAnswers,
+          'wrong-answer': closedQuestions[i].selected === j && closedQuestions[i].correctAnswer !== j && showAnswers
+          }">
+          {{a}}
+        </span>
+      </div>
+    </li>
+  </ul>
+  <h1>Pytania otwarte:</h1>
+  <ul>
+    <li *ngFor="let q of openQuestions; let i = index">
+      <p>
+        {{i + 1}}. {{q.content}}
+      </p>
+      <p *ngIf="showAnswers" class="correct-answer">
+        {{q.correctAnswer}}
+      </p>
+      <textarea rows="24"></textarea>
+    </li>
+  </ul>
+  <button *ngIf="!showAnswers" (click)="onSubmit()">Sprawdź</button>
+  <button *ngIf="showAnswers" (click)="onNewExam()">Nowy Egzamin</button>
+</div>

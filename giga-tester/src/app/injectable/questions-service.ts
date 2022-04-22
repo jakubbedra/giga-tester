@@ -17,6 +17,7 @@ import {WzrExam} from "../data/wzr/wzr-exam";
 import {JoKuchtaExam} from "../data/jo/jo-kuchta-exam";
 import {JoBowiszExam} from "../data/jo/jo-bowisz-exam";
 import {BskK1} from "../data/bsk/bsk-k1";
+import {StExam} from "../data/st/st-exam";
 
 @Injectable()
 export class QuestionsService {
@@ -119,6 +120,9 @@ export class QuestionsService {
       case "jo-bowisz": {
         return JoBowiszExam.openQuestions;
       }
+      case "st": {
+        return StExam.openQuestions;
+      }
     }
     return [];
   }
@@ -139,6 +143,9 @@ export class QuestionsService {
           return JoKuchtaExam.closedQuestions.concat(JoKuchtaExam.customClosedQuestions);
         }
         return JoKuchtaExam.closedQuestions;
+      }
+      case "st": {
+        return StExam.closedQuestions;
       }
     }
     return [];

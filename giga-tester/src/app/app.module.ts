@@ -15,6 +15,7 @@ import { WzrComponent } from './wzr/wzr.component';
 import { JoComponent } from './jo/jo.component';
 import { HomeComponent } from './home/home.component';
 import { EdComponent } from './ed/ed.component';
+import { StComponent } from './st/st.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EdComponent } from './ed/ed.component';
     WzrComponent,
     JoComponent,
     HomeComponent,
-    EdComponent
+    EdComponent,
+    StComponent
   ],
   imports: [
     BrowserModule,
