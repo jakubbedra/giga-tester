@@ -16,6 +16,9 @@ import { JoComponent } from './jo/jo.component';
 import { HomeComponent } from './home/home.component';
 import { EdComponent } from './ed/ed.component';
 import { StComponent } from './st/st.component';
+import { EnterKeyComponent } from './enter-key/enter-key.component';
+import { QuestionParserComponent } from './question-parser/question-parser.component';
+import { PmlComponent } from './pml/pml.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { StComponent } from './st/st.component';
     JoComponent,
     HomeComponent,
     EdComponent,
-    StComponent
+    StComponent,
+    EnterKeyComponent,
+    QuestionParserComponent,
+    PmlComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ClosedQuestion} from "../questions/closed-question.model";
 import {QuestionsService} from "../injectable/questions-service";
+import {RpiExam} from "../data/rpi/rpi-exam";
 
 @Component({
   selector: 'app-rpi',
@@ -9,9 +10,12 @@ import {QuestionsService} from "../injectable/questions-service";
 })
 export class RpiComponent implements OnInit {
 
+  allQuestions: boolean;
+
   showAnswers: boolean;
-  pointsPerClosedQuestion = 1.5;
-  maxPointsClosedQuestions = 15;
+  pointsPerClosedQuestion = 1;
+  maxPointsClosedQuestions = 40;
+  questionsCount = 40;
 
   closedQuestions: ClosedQuestion[];
 
@@ -19,6 +23,7 @@ export class RpiComponent implements OnInit {
     private questionsService: QuestionsService
   ) {
     this.showAnswers = false;
+    this.allQuestions = false;
   }
 
   ngOnInit(): void {
@@ -26,8 +31,9 @@ export class RpiComponent implements OnInit {
   }
 
   initExam() {
-    this.closedQuestions = this.questionsService.getRandomClosedQuestions("rpi", 10, false)
-      .map(this.mixQuestion);
+    this.closedQuestions = this.questionsService.getRandomClosedQuestions(
+      "rpi", this.questionsCount, false
+    ).map(this.mixQuestion);
   }
 
   onSelectAnswer(i: number, j: number) {
@@ -46,6 +52,18 @@ export class RpiComponent implements OnInit {
       q.selected = -1;
     });
     this.initExam();
+  }
+
+  onCheckAllQuestions() {
+    if (this.allQuestions) {
+      this.maxPointsClosedQuestions = 40;
+      this.questionsCount = 40;
+    } else {
+      this.maxPointsClosedQuestions = RpiExam.closedQuestions.length;
+      this.questionsCount = RpiExam.closedQuestions.length;
+    }
+    this.allQuestions = !this.allQuestions;
+    this.onNewExam();
   }
 
   calculateScore(): number {

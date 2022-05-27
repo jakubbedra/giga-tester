@@ -1,0 +1,11 @@
+
+<div id="parser">
+  <p>
+    [work in progress]
+    <!--
+    Funkcja jest work in progress. Póki co działa tak, że tworzy z wprowadzonych pytań plik, który można pobrać
+    (i np.: wysłać do admina żeby dodał te pytania) -->
+  </p>
+  <textarea placeholder="Wklej pytania zamknięte z odpowiedziami." [(ngModel)]="questionsAndAnswers"></textarea>
+  <button (click)="onParse()">Wygeneruj i pobierz plik z pytaniami</button>
+</div>

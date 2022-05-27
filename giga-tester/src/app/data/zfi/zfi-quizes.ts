@@ -3,6 +3,61 @@ import {ClosedQuestion} from "../../questions/closed-question.model";
 export class ZfiQuizes {
   public static closedQuestions: ClosedQuestion[] = [
     new ClosedQuestion(`
+Kroki potrzebne do wdrożenia historii użytkownika to?
+`,[`
+Akcje.
+`, `
+Sprinty
+`, `
+Epiki
+`, `
+Zadania
+`], 3),
+    new ClosedQuestion(`
+Za mapę produktu odpowiada:
+`,[`
+Zespół menadżerski
+`, `
+Mistrz scrumu
+`, `
+Właściciel produktu
+`, `
+Interesariusz
+`], 2),
+    new ClosedQuestion(`
+Ustalanie i koordynacja priorytetów każdego dnia odbywa się w ramach:
+`,[`
+Spotkania Mistrza Scrumu z Właścicielem produktu
+`, `
+codziennego scrumu
+`, `
+rozmów interesariuszy
+`, `
+ustalane odgórnie przez właściciela produktu
+`], 1),
+    new ClosedQuestion(`
+W zarządzaniu scrum interesariusze należą do:
+`,[`
+Zespołu scrumowego
+`, `
+Zespołu deweloperskiego
+`, `
+Zespołu mistrza scrumu
+`, `
+Otoczenia projektu
+`], 3),
+    new ClosedQuestion(`
+Serie działań z dzieleniem funckji na wymagania do wykonania to:
+`,[`
+Epiki
+`, `
+Motywy
+`, `
+Historie użytkowników
+`, `
+Zadania
+`], 0),
+    new ClosedQuestion(`
 W analizie SWOT szanse opisuje litera
 `,
       [`

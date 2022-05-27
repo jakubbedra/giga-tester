@@ -3,6 +3,21 @@
   <nav class="navigation-bar">
     <ul class="navigation-links">
       <li routerLinkActive="active">
+        <a routerLink="enter-key">Wprowadź klucz</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="parser">Wprowadź pytania</a>
+      </li>
+      <li routerLinkActive="active" *ngFor="let item of subjects | keyvalue">
+        <a *ngIf="item.key != 'de28ebc4-ff1e-4cfc-9ffa-73f1a869d7f9'" routerLink="{{item.key}}">
+          {{item.value}}
+        </a>
+        <a *ngIf="item.key == 'de28ebc4-ff1e-4cfc-9ffa-73f1a869d7f9'" href="https://www.youtube.com/shorts/xzm7vCmpMUA?&ab_channel=KyleKrueger">
+          ???
+        </a>
+      </li>
+      <!--
+      <li routerLinkActive="active">
         <a routerLink="zbs">ZBS</a>
       </li>
       <li routerLinkActive="active">
@@ -29,6 +44,7 @@
       <li routerLinkActive="active">
         <a routerLink="st">ST</a>
       </li>
+      -->
     </ul>
   </nav>
   <div class="user-login">

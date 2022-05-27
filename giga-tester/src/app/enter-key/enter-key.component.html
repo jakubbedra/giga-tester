@@ -1,0 +1,36 @@
+<div class="key-div">
+  <h2>Klucze do bazy pytań [work in progress...]</h2>
+  <div id="papaj" *ngIf="easterEggEnabled">
+    <h2>Papież patrzy!</h2>
+    <iframe
+      width="420"
+      height="315"
+      src="https://www.youtube.com/embed/1vZ28SAgzKc?autoplay=1"
+      title="hehe papjeż :---DDDDDD"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+    ></iframe>
+  </div>
+  <div id="selection" *ngIf="!easterEggEnabled">
+    <label for="key">Wprowadź klucz do bazy pytań:</label>
+    <p *ngIf="state == 'OK'" class="text-ok">Przedmiot domyślnie dodany do twojej listy! :)</p>
+    <p *ngIf="state == 'ERROR'" class="text-error">UPS! Coś poszło nie tak... :(</p>
+    <input id="key" type="text" [(ngModel)]="keyString"/>
+    <button id="addKeyButton" type="button" (click)="onClickAddKey()">Dodaj</button>
+  </div>
+</div>
+<div class="dangerous-button-div">
+  <button id="clearKeysButton" type="button" class="big-red-button" (click)="onClickClearKeys()">
+    Wyczyść listę przedmiotów.
+  </button>
+</div>
+path: '46190c5c-3a50-4b41-92c1-609f54d738d3', component: ZbsEntryComponent,
+path: '1e83ad9f-459b-4587-baf6-ff801b7dd6a4', component: ZbsComponent,
+path: '74ad80ab-ef93-444d-99bb-3b285356deed', component: RpiComponent,
+path: 'de6eb720-a6a8-44a7-92db-d8b675d3fe6e', component: ZfiComponent,
+path: '031f5088-b155-4ddd-b900-ceeac4cd6f30', component: BskComponent,
+path: '33caaee6-9d99-4ce4-aed9-0085988e1be9', component: WzrComponent,
+path: 'a9ee3187-5e4b-4cb6-82b1-e544a4a9f8bd', component: JoComponent,
+path: '1075308d-3319-4a52-a088-5878a792d318', component: EdComponent,
+path: '82d8dd92-0a7a-4f9a-914b-c5575b1907a3', component: StComponent
+path: 'de28ebc4-ff1e-4cfc-9ffa-73f1a869d7f9', component: GigaTesterSieZesral

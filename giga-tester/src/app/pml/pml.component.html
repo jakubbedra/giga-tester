@@ -1,8 +1,4 @@
-<span id="info">
-    **Na stacjo są jeszcze otwarte, ale mamy zdalnie więc whatever. ¯\_(ツ)_/¯
-</span>
 <div id="exam">
-  <button (click)="onCheckAllQuestions()">{{allQuestions == true ? "WSZYSTKIE PYTANIA" : "PRZYKŁADOWY EGZAMIN"}}</button>
   <h1>Pytania zamknięte:</h1>
   <h3 [hidden]="!showAnswers" [ngClass]="calculateScore() > maxPointsClosedQuestions/2 ? 'correct-answer' : 'wrong-answer' ">
     Wynik: {{calculateScore()}}/{{maxPointsClosedQuestions}}
@@ -25,5 +21,5 @@
     </li>
   </ul>
   <button *ngIf="!showAnswers" (click)="onSubmit()">Sprawdź</button>
-  <button *ngIf="showAnswers" (click)="onNewExam()">Nowy Egzamin</button>
+  <button *ngIf="showAnswers" (click)="onNewExam()">Nowy Kolos</button>
 </div>

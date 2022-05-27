@@ -12,12 +12,12 @@ import {ZbsOldExam} from "../data/zbs/zbs-old-exam";
 import {RpiExam} from "../data/rpi/rpi-exam";
 import {ZfiQuizes} from "../data/zfi/zfi-quizes";
 import {MultipleChoiceQuestion} from "../questions/multiple-choice-question.model";
-import {BskExam} from "../data/bsk/bsk-exam";
 import {WzrExam} from "../data/wzr/wzr-exam";
 import {JoKuchtaExam} from "../data/jo/jo-kuchta-exam";
 import {JoBowiszExam} from "../data/jo/jo-bowisz-exam";
 import {BskK1} from "../data/bsk/bsk-k1";
 import {StExam} from "../data/st/st-exam";
+import pmlJson from "../data/pml/pml.json"
 
 @Injectable()
 export class QuestionsService {
@@ -146,6 +146,9 @@ export class QuestionsService {
       }
       case "st": {
         return StExam.closedQuestions;
+      }
+      case "pml": {
+        return pmlJson;
       }
     }
     return [];

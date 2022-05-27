@@ -1,21 +1,20 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {ClosedQuestion} from "../questions/closed-question.model";
 import {QuestionsService} from "../injectable/questions-service";
-import {ZfiQuizes} from "../data/zfi/zfi-quizes";
 
 @Component({
-  selector: 'app-zfi',
-  templateUrl: './zfi.component.html',
-  styleUrls: ['./zfi.component.css']
+  selector: 'app-pml',
+  templateUrl: './pml.component.html',
+  styleUrls: ['./pml.component.css']
 })
-export class ZfiComponent implements OnInit {
+export class PmlComponent implements OnInit {
 
-  allQuestions: boolean;
   showAnswers: boolean;
   pointsPerClosedQuestion = 1;
-  maxPointsClosedQuestions = 5;
+  maxPointsClosedQuestions = 30;
+  closedQuestionsCount = 9;
 
-  questionsCount = 5;
+  mode: string;
 
   closedQuestions: ClosedQuestion[];
 
@@ -23,7 +22,7 @@ export class ZfiComponent implements OnInit {
     private questionsService: QuestionsService
   ) {
     this.showAnswers = false;
-    this.allQuestions = false;
+    this.mode = "KOLOS";
   }
 
   ngOnInit(): void {
@@ -31,7 +30,7 @@ export class ZfiComponent implements OnInit {
   }
 
   initExam() {
-    this.closedQuestions = this.questionsService.getRandomClosedQuestions("zfi", this.questionsCount, false)
+    this.closedQuestions = this.questionsService.getRandomClosedQuestions("pml", this.closedQuestionsCount, false)
       .map(this.mixQuestion);
     this.closedQuestions.forEach(q => {
       q.selected = -1;
@@ -46,18 +45,6 @@ export class ZfiComponent implements OnInit {
 
   onSubmit() {
     this.showAnswers = true;
-  }
-
-  onCheckAllQuestions() {
-    if (this.allQuestions) {
-      this.maxPointsClosedQuestions = 5;
-      this.questionsCount = 5;
-    } else {
-      this.maxPointsClosedQuestions = ZfiQuizes.closedQuestions.length;
-      this.questionsCount = ZfiQuizes.closedQuestions.length;
-    }
-    this.allQuestions = !this.allQuestions;
-    this.onNewExam();
   }
 
   onNewExam() {
@@ -97,5 +84,4 @@ export class ZfiComponent implements OnInit {
     question.correctAnswer = correctAnswerNewInd;
     return question;
   }
-
 }

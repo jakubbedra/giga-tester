@@ -7,10 +7,21 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  subjects: Record<string, string>;
+
   constructor() {
   }
 
   ngOnInit(): void {
+    this.initSubjectListFromLocalStorage();
+  }
+
+  initSubjectListFromLocalStorage() {
+    var tmp: Record<string, string> = JSON.parse(localStorage.getItem("GIGAtester-keys"));
+    if (tmp == undefined) {
+      tmp = {};
+    }
+    this.subjects = tmp;
   }
 
 }

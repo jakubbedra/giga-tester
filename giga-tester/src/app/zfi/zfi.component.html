@@ -3,7 +3,11 @@
 </span>
 <div id="exam">
   <h1>Pytania zamknięte:</h1>
-  <h3 [hidden]="!showAnswers">Wynik: {{calculateScore()}}/{{maxPointsClosedQuestions}}</h3>
+  <button (click)="onCheckAllQuestions()">{{allQuestions == true ? "WSZYSTKIE PYTANIA" : "PRZYKŁADOWY TEŚCIK"}}</button>
+  <h1>Pytania zamknięte:</h1>
+  <h3 [hidden]="!showAnswers" [ngClass]="calculateScore() > maxPointsClosedQuestions/2 ? 'correct-answer' : 'wrong-answer' ">
+    Wynik: {{calculateScore()}}/{{maxPointsClosedQuestions}}
+  </h3>
   <ul>
     <li *ngFor="let q of closedQuestions; let i = index">
       <p>

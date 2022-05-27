@@ -1,0 +1,118 @@
+[
+  {
+    "content": "\nNajbardziej prawdopodobnym czynnikiem etiologicznym płaskich lub\nbrodawkowatych nie owrzodzonych zmian u osób aktywnych płciowo na prąciu lub\nsromie, którym nie towarzyszy ból, wyciek ani powiększenie węzłów jest:\n",
+    "answers": [
+      "\na. treponema pallidum\n",
+      "\nb. n. gonorrhoeae\n",
+      "\nc. herpes simplex\n",
+      "\nd. chlamydia trachomatis\n",
+      "\ne. HPV\n"
+    ],
+    "correctAnswer": 4,
+    "selected": -1,
+    "submitted": false
+  },
+  {
+    "content": "\nKtóra ze zmian sromu zwiększa ryzyko raka płaskonabłonkowego?\n",
+    "answers": [
+      "\na. torbiel gruczołu Bartholina\n",
+      "\nb. liszaj twardzinowy\n",
+      "\nc. zapalenie gruczołów przedsionkowych mniejszych\n",
+      "\nd. kłykciny kończyste\n",
+      "\ne. gruczolak potowy brodawkowaty\n"
+    ],
+    "correctAnswer": 1,
+    "selected": -1,
+    "submitted": false
+  },
+  {
+    "content": "\nW spektrum obrazu histologicznego której ze zmian NIE występuje koilocytoza\n",
+    "answers": [
+      "\na. kłykciny kończyste\n",
+      "\nb. liszaj twardzinowy sromu\n",
+      "\nc. CIN1\n",
+      "\nd. dysplazja niskiego stopnia nabłonka pochwy\n",
+      "\ne. brodawczak krtani\n"
+    ],
+    "correctAnswer": 1,
+    "selected": -1,
+    "submitted": false
+  },
+  {
+    "content": "\nKtórej z poniższych stwierdzeń dotyczących śródnabłonkowego nowotworzenia\nsromu (VIN) jest prawdziwe?\n",
+    "answers": [
+      "\n\na. VIN wywołane infekcją HPV rzadziej transformuje w raka niż VIN\nrozwijający się na podłożu przewlekłych dermatoz\n",
+      "\nb. VIN typu brodawkowo-bazaloidalnego jest najczęściej zmianą\njednoogniskową\n",
+      "\nc. rak płaskonabłonkowy sromu rozwijający się na podłożu dermatoz rozwija się\nzwykle u kobiet młodych\n",
+      "\nd. radioterapia zmian o typie VIN zmniejsza ryzyko progresji do raka\n",
+      "\ne. wszystkie\n"
+    ],
+    "correctAnswer": 0,
+    "selected": -1,
+    "submitted": false
+  },
+  {
+    "content": "\nNajczęstszym nowotworem sromu jest (wejściówka 2018-19)\n",
+    "answers": [
+      "\na. czerniak\n",
+      "\nb. choroba Pageta\n",
+      "\nc. rak płaskonabłonkowy\n",
+      "\nd. rak gruczołowy\n",
+      "\ne. teratoma\n"
+    ],
+    "correctAnswer": 2,
+    "selected": -1,
+    "submitted": false
+  },
+  {
+    "content": "\nKtóra z cech jest typowa dla postaci zróżnicowanej (prostej) nowotworzenia\nśródnabłonkowego sromu (VIN)?\n",
+    "answers": [
+      "\na. częściej niż typ zwykły przekształca się w raka płaskonabłonkowego\n",
+      "\nb. jej rozwój zależy od infekcji wirusem HPV \n",
+      "\nc. zmiany rozwijają się wieloogniskowo na sromie\n",
+      "\nd. rozwijają się głównie u kobiet w 3-4 dekadzie \n",
+      "\ne. wszystkie\n"
+    ],
+    "correctAnswer": 0,
+    "selected": -1,
+    "submitted": false
+  },
+  {
+    "content": "\nVulvar intraepithelial neoplasia [=VIN]\n",
+    "answers": [
+      "\na. 10% można stwierdzić przerzuty w węzłach pachwinowych\n",
+      "\npowstawanie związane z infekcją HSV 1 i 2\n",
+      "\nc. z reguły poprzedza rozwój raka szyjki macicy\n",
+      "\nd. występuje częściej u nieródek\n",
+      "\ne. wszystkie powyższe są fałszywe\n"
+    ],
+    "correctAnswer": 4,
+    "selected": -1,
+    "submitted": false
+  },
+  {
+    "content": "\nKtóra z poniższych zmian narządów płciowych żeńskich NIE powstaje na podłożu\ninfekcji HPV?\n",
+    "answers": [
+      "\na. Neoplazja wewnątrznabłonkowa pochwy wysokiego stopnia\n",
+      "\nb. Rak gruczołowy in situ szyjki macicy\n",
+      "\nc. Rak płaskonabłonkowy szyjki macicy\n",
+      "\nd. Neoplazja wewnątrznabłonkowa sromu zróżnicowana (differentiated\nVIN)\n",
+      "\ne. Neoplazja wewnątrznabłonkowa sromu bazoidalna (warty-basaloid VIN)\n"
+    ],
+    "correctAnswer": 3,
+    "selected": -1,
+    "submitted": false
+  },
+  {
+    "content": "\nNeoplazja wewnabłonkowa sromu prosta:\n",
+    "answers": [
+      "\na. inaczej differentiated VIN \n",
+      "\nb. rozwija się na podłożu liszaja zanikowego\n",
+      "\nc. u starszych pacjentek\n",
+      "\nd. na podłożu HPV\n"
+    ],
+    "correctAnswer": 3,
+    "selected": -1,
+    "submitted": false
+  }
+]

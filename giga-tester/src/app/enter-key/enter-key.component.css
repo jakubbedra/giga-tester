@@ -1,0 +1,147 @@
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  box-shadow: 0px 0px 2px 2px black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #F5F7FA;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+select:focus {
+  border: 1px rgba(255, 255, 255, 0.05);;
+}
+
+option {
+  background-color: #323232;
+  border: 1px solid black;
+  font-size: 18px;
+}
+
+.text-error {
+  color: red;
+}
+
+.text-ok {
+  color: greenyellow;
+}
+
+.dangerous-button-div {
+  height: 100px;
+  font-size: 16px;
+  width: 40%;
+  margin: 0px auto;
+  padding-top: 10px;
+}
+
+.big-red-button {
+  width: 100%;
+  margin-top: 10px;
+  background-color: red;
+}
+
+.big-red-button:hover {
+  background-color: crimson;
+}
+
+button {
+  transition: all 0.3s ease 0s;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  box-shadow: 0px 0px 2px 2px black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #F5F7FA;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+}
+
+.key-div {
+  height: 500px;
+  font-size: 16px;
+  width: 40%;
+  margin: 0px auto;
+  padding-top: 10px;
+}
+
+#selection, #entry {
+  margin-top: 100px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  box-shadow: 0px 0px 2px 2px black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #F5F7FA;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.answer {
+  color: lawngreen;
+  white-space: pre-line;
+}
+
+img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  #info {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 300%;
+  }
+
+  #entry {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 300%;
+  }
+
+  #selection {
+    width: 80%;
+    font-size: 240%;
+  }
+
+  select {
+    height: 140%;
+    font-size: 200%;
+  }
+
+  .closed-answer {
+    font-size: 100%;
+  }
+
+  textarea {
+    font-size: 120%;
+  }
+
+  button {
+    font-size: 140%;
+  }
+
+  span {
+    font-size: 100%;
+  }
+
+  li p {
+    font-size: 120%;
+  }
+}

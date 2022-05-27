@@ -23,9 +23,19 @@ Silnikiem baz danych dla systemu Graylog jest:
 MongoDB
 `),
     new OpenQuestion(`
-[placeholder]
+Jaki wzór pozwala na zdekodowanie k[...]
 `, `
-...
+chuj wie
+`),
+    new OpenQuestion(`
+Silnikiem wyszukiwania dla systemu Graylog jest:
+`, `
+ElasticSearch
+`),
+    new OpenQuestion(`
+Zarządzanie systemem Graylog jest możliwe poprzez protokół:
+`, `
+HTTP
 `)/*,
     new OpenQuestion(`
 W przypadku protokołu SNMP hierarchiczna baza danych opisująca parametry konfiguracji urządzenia jest udostępniana poprzez struktury:
