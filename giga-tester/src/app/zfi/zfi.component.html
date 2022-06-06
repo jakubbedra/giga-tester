@@ -2,7 +2,6 @@
     **Tutaj to chuj wie co XD chyba pytanka z quizów bo zaliczenia nie było jeszcze nigdy ¯\_(ツ)_/¯
 </span>
 <div id="exam">
-  <h1>Pytania zamknięte:</h1>
   <button (click)="onCheckAllQuestions()">{{allQuestions == true ? "WSZYSTKIE PYTANIA" : "PRZYKŁADOWY TEŚCIK"}}</button>
   <h1>Pytania zamknięte:</h1>
   <h3 [hidden]="!showAnswers" [ngClass]="calculateScore() > maxPointsClosedQuestions/2 ? 'correct-answer' : 'wrong-answer' ">

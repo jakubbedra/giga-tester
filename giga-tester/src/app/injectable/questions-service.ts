@@ -77,6 +77,25 @@ export class QuestionsService {
   }
 
   private static findOpenQuestionsList(category: string, includeCustomQuestions) {
+    if (category.startsWith("zbs")) {
+      //zbs-0-0-0
+      let entryQuestions: boolean = category.charAt(4) === "1";
+      let wdcQuestions: boolean = category.charAt(6) === "1";
+      let customQuestions: boolean = category.charAt(8) === "1";
+      let questions = ZbsOldExam.openQuestions;
+      questions.forEach(q => q.content = "[Paka] " + q.content);
+      if (wdcQuestions) {
+        let tmp = ZbsOldExam.openQuestionsWDC;
+        tmp.forEach(q => q.content = "[WDC] " + q.content);
+        questions.concat(tmp);
+      }
+      if (customQuestions) {
+        let tmp = ZbsOldExam.openQuestionsCustom;
+        tmp.forEach(q => q.content = "[Custom] " + q.content);
+        questions.concat(tmp);
+      }
+      return questions;
+    }
     switch (category) {
       case "firewall": {
         return ZbsEntry1.questions;
@@ -99,9 +118,6 @@ export class QuestionsService {
       case "ipv6": {
         return ZbsEntry7.questions;
       }
-      case "zbs": {
-        return ZbsOldExam.openQuestions;
-      }
       case "bsk": {
         if (includeCustomQuestions) {
           return BskK1.openQuestions.concat(BskK1.nonExamOpenQuestions);
@@ -112,7 +128,7 @@ export class QuestionsService {
         return WzrExam.questions;
       }
       case "jo-kuchta": {
-        if(includeCustomQuestions){
+        if (includeCustomQuestions) {
           return JoKuchtaExam.openQuestions.concat(JoKuchtaExam.customOpenQuestions);
         }
         return JoKuchtaExam.openQuestions;
@@ -128,10 +144,45 @@ export class QuestionsService {
   }
 
   private static findClosedQuestionsList(category: string, includeCustomQuestions: boolean) {
-    switch (category) {
-      case "zbs": {
-        return ZbsOldExam.closedQuestions;
+    //console.log(category);
+    //console.log(category.startsWith("zbs"));
+    if (category.startsWith("zbs")) {
+      //zbs-0-0-0
+      //console.log("chuj");
+      let entryQuestions: boolean = category.charAt(4) === "1";
+      let wdcQuestions: boolean = category.charAt(6) === "1";
+      let customQuestions: boolean = category.charAt(8) === "1";
+      let questions = [];
+      ZbsOldExam.closedQuestions.forEach(q => questions.push(Object.assign({}, q)));
+      questions.forEach(q => q.content = "[Paka] " + q.content);
+      if (entryQuestions) {
+        let tmp = [];
+        ZbsOldExam.closedQuestionsEntries.forEach(q => tmp.push(Object.assign({}, q)));
+        tmp.forEach(q => {
+          q.content = "[Wejsciówka] " + q.content;
+          questions.push(q);
+        });
       }
+      if (wdcQuestions) {
+        let tmp = [];
+        //console.log("WDCCCCC XD");
+        ZbsOldExam.closedQuestionsWDC.forEach(q => tmp.push(Object.assign({}, q)));
+        tmp.forEach(q => {
+          q.content = "[WDC] " + q.content;
+          questions.push(q);
+        });
+      }
+      if (customQuestions) {
+        let tmp = [];
+        ZbsOldExam.closedQuestionsCustom.forEach(q => tmp.push(Object.assign({}, q)));
+        tmp.forEach(q => {
+          q.content = "[Custom] " + q.content;
+          questions.push(q);
+        });
+      }
+      return questions;
+    }
+    switch (category) {
       case "rpi": {
         return RpiExam.closedQuestions;
       }
@@ -139,7 +190,7 @@ export class QuestionsService {
         return ZfiQuizes.closedQuestions;
       }
       case "jo-kuchta": {
-        if(includeCustomQuestions){
+        if (includeCustomQuestions) {
           return JoKuchtaExam.closedQuestions.concat(JoKuchtaExam.customClosedQuestions);
         }
         return JoKuchtaExam.closedQuestions;
@@ -157,7 +208,7 @@ export class QuestionsService {
   private static findMultipleChoiceQuestionsList(category: string, includeCustomQuestions: boolean) {
     switch (category) {
       case "bsk": {
-        if(includeCustomQuestions){
+        if (includeCustomQuestions) {
           return BskK1.multipleChoiceQuestions.concat(BskK1.nonExamMultipleChoiceQuestions);
         }
 //        return BskExam.multipleChoiceQuestions;

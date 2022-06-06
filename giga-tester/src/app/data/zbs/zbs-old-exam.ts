@@ -608,12 +608,386 @@ Domain Martime Zone
 `], 1)
   ];
 
+  public static closedQuestionsWDC: ClosedQuestion[] = [
+    new ClosedQuestion(`
+W procesie żądania certyfikatu, klient:
+`,
+      [`
+przed wysłaniem żądania CSR sprawdza, czy certyfikat CA jest samo-podpisany (self-signed) - jęsli nie, rezygnuje z próby uzyskania certyfikatu.
+`, `
+generuje klucz publiczny i prywatny, a następnie przesyła ten pierwszy urzędowu certyfikacji (CA) jako część żądania CSR.
+`, `
+generuje klucz publiczny i prywatny, a następnie przesyła ten drugi urzędowu certyfikacji (CA) jako część żądania CSR.
+`, `
+przesyła urzędowi certyfikacji (CA) żądanie CSR, a CA generuje klucz prywatny i publiczny klienta.
+`], 1),
+    new ClosedQuestion(`
+Wersja 3 standardu X.509 różni się od wersji 2 wprowadzeniem:
+`,
+      [`
+mozliwości użycia szyfrowania AES.
+`, `
+mechanizmu rozszerzeń (extensions) certyfikatu.
+`, `
+nowych pól: Issuer Unique ID i Subject Unique ID.
+`, `
+wykorzystania czasu UTC w polach dotyczących czasu ważności certyfikatu.
+`], 1),
+    new ClosedQuestion(`
+Rozwiązanie Pretty Good Privacy (PGP) wykorzystuje:
+`, [`
+model zaufania typu user-centric
+`, `
+sieć serwerów SCEP.
+`, `
+hierachiczny (strict hierachy) model zaufania.
+`, `
+certyfikaty w formacie X.509.
+`], 0),
+    new ClosedQuestion(`
+Krytyczne rozszerzenia certyfikatu X.509:
+`,[`
+opisują techniczne parametry mechanizmów, które posłużyły utowrzeniu certyfikatu.
+`, `
+stanowią zagrożenie, gdyż w wykorzystujących je mechanizmach wykryto luki zabezpieczeń.
+`, `
+są dodatkowo chronione dedykowanymi mechanizmami kryptograficznymi.
+`, `
+muszą zostać zinterpretowane i przetworzone przez aplikacją, aby dany certyfikat mógł zostać wykorzystany.
+`], 3)
+  ];
+
+  public static closedQuestionsCustom: ClosedQuestion[] =[
+    new ClosedQuestion(`
+Którą warstwę OSI obejmuje filtracja bezstanowa?
+`,[`
+2 (łącza danych)
+`, `
+1 (fizyczna)
+`, `
+3 (sieciowa)
+`, `
+7 (aplikacji)
+`], 2),
+    new ClosedQuestion(`
+Które warstwy OSI obejmuje filtracja stanowa?
+`,[`
+2 (łącza danych), 1 (fizyczna)
+`, `
+3 (sieciowa), 7 (aplikacji)
+`, `
+3 (sieciowa), 4 (transportowa)
+`, `
+1 (fizyczna), 4 (transportowa)
+`], 2),
+    new ClosedQuestion(`
+Które warstwy OSI obejmuje firewall aplikacyjny?
+`,[`
+5 (sesji), 6 (prezentacji), 7 (aplikacji)
+`, `
+4 (transportowa), 5 (sesji), 6 (prezentacji)
+`, `
+6 (prezentacji), 7 (aplikacji)
+`, `
+3 (sieciowa), 4 (transportowa), 5 (sesji)
+`], 0),
+    new ClosedQuestion(`
+Do filtrowania ramek ethernetowych służą:
+`,[`
+ebtables
+`, `
+ip6tables
+`, `
+arptables
+`, `
+żadne z powyższych
+`], 0),
+    new ClosedQuestion(`
+Do filtrowania IPv6 służą:
+`,[`
+ebtables
+`, `
+ip6tables
+`, `
+arptables
+`, `
+żadne z powyższych
+`], 1),
+    new ClosedQuestion(`
+Do filtrowania zapytań ARP służą:
+`,[`
+ebtables
+`, `
+ip6tables
+`, `
+arptables
+`, `
+żadne z powyższych
+`], 2)
+
+  ];
+
+  public static closedQuestionsEntries: ClosedQuestion[] = [
+    new ClosedQuestion(`
+Różnica pomiędzy REJECT a DROP polega na:
+`,[`
+DROP   - wyrzuć pakiet bez żadnego komunikatu;
+REJECT - odrzuć i odeślij informację o błędzie do nadawcy
+`, `
+DROP - odrzuć i odeślij informację o błędzie do nadawcy;
+REJECT   - wyrzuć pakiet bez żadnego komunikatu
+`, `
+Brak różnicy, REJECT i DROP robią to samo.
+`, `
+REJECT i DROP to dwie niezwiązane ze sobą rzeczy.
+`], 0),
+    new ClosedQuestion(`
+Aby ustawić domyślną politykę łańcucha INPUT w domyślnej tablicy na DROP należy dodać regułę:
+`,[`
+iptables -P INPUT DROP
+`, `
+iptables -P DROP INPUT
+`, `
+iptables -S INPUT DROP
+`, `
+iptables INPUT DROP
+`], 0),
+    new ClosedQuestion(`
+Jaka usługa działa na porcie 53/UDP:
+`,[`
+Domain Name System (DNS)
+`, `
+Microsoft Terminal Server (RDP)
+`, `
+Secure Shell (SSH)
+`, `
+telnet
+`], 0),
+    new ClosedQuestion(`
+Jaka usługa działa na porcie 22/TCP:
+`,[`
+Secure Shell (SSH)
+`, `
+Microsoft Terminal Server (RDP)
+`, `
+Hypertext Transfer Protocol (HTTP)
+`, `
+Domain Name System (DNS)
+`], 0),
+    new ClosedQuestion(`
+Jaka usługa działa na porcie 23/TCP:
+`,[`
+telnet
+`, `
+Hypertext Transfer Protocol (HTTP)
+`, `
+Domain Name System (DNS)
+`, `
+Secure Shell (SSH)
+`], 0),
+    new ClosedQuestion(`
+Jaka usługa działa na porcie 3389/TCP (Windows):
+`,[`
+Microsoft Terminal Server (RDP)
+`, `
+Secure Shell (SSH)
+`, `
+telnet
+`, `
+Hypertext Transfer Protocol (HTTP)
+`], 0),
+    new ClosedQuestion(`
+Jaka usługa działa na porcie 80/TCP:
+`,[`
+Hypertext Transfer Protocol (HTTP)
+`, `
+Secure Shell (SSH)
+`, `
+telnet
+`, `
+Microsoft Terminal Server (RDP)
+`], 0),
+    new ClosedQuestion(`
+Translacja adresów NAT w przypadku wiele-do-jednego polega na:
+`,[`
+wiele adresów prywatnych – jeden publiczny
+`, `
+wiele adresów prywatnych – wiele publicznych
+`, `
+jeden adres prywatny – jeden publiczny
+`, `
+jeden adres prywatny – wiele publicznych
+`], 0),
+    new ClosedQuestion(`
+Proces elektronicznego podpisywania dokumentu polega na zaszyfrowaniu:
+`,[`
+skrótu danych kluczem prywatnym
+`, `
+klucza publicznego kluczem prywatnym
+`, `
+skrótu danych kluczem publicznym
+`, `
+klucza publicznego skrótem danych
+`], 0),
+    new ClosedQuestion(`
+Certyfikat może zawierać (włączając pola obowiązkowe):
+`,[`
+wszystkie pozostałe
+`, `
+klucz publiczny urzędu certyfikacji potwierdzającego tożsamość podmiotu
+`, `
+klucz prywatny podmiotu certyfikowanego
+`, `
+klucz publiczny podmiotu certyfikowanego
+`], 0),
+    new ClosedQuestion(`
+Certyfikat konkretnego podmiotu jest podpisywany:
+`,[`
+kluczem prywatnym CA
+`, `
+kluczem publicznym CA
+`, `
+kluczem publicznym podmiotu i później CA
+`, `
+kluczem publicznym podmiotu
+`], 0),
+    new ClosedQuestion(`
+PKI jest zdefiniowane następującym standardem:
+`,[`
+X.509
+`, `
+IEEE 802.1X
+`, `
+X.500
+`, `
+IEEE 802.11X
+`], 0),
+    new ClosedQuestion(`
+Certyfikat urzędu certyfikacji typu ROOT to:
+`,[`
+Zawsze certyfikat typu self-signed.
+`, `
+Nigdy nie jest certyfikatem typu self-signed.
+`, `
+Nie posiada powiązanego z nim klucza prywatnego.
+`], 0),
+    new ClosedQuestion(`
+Algorytm DSA (Digital Signature Algorithm):
+`,[`
+Pozwala na weryfikację podpisu cyfrowego.
+`, `
+Pozwala na odszyfrowanie danych.
+`, `
+Pozwala na szyfrowanie danych.
+`, `
+Jest symetrycznym algorytmem kryptograficznym.
+`], 0),
+    new ClosedQuestion(`
+Algorytm DSA (Digital Signature Algorithm):
+`,[`
+Pozwala na cyfrowe podpisywanie danych.
+`, `
+Pozwala na odszyfrowanie danych.
+`, `
+Pozwala na szyfrowanie danych.
+`, `
+Jest symetrycznym algorytmem kryptograficznym.
+`], 0),
+    new ClosedQuestion(`
+Jeśli, stworzony podczas sprawdzania poprawności certyfikatu, ciąg certyfikatów nie kończy się certyfikatem typu self-signed, to:
+`,[`
+Certyfikat nie zostanie uznany za zaufany.
+`, `
+Certyfikat może zostać uznany za zaufany.
+`, `
+Certyfikat zostanie zawsze uznany za zaufany.
+`, `
+Ciąg taki nigdy nie kończy się certyfikatem typu self-signed.
+`], 0),
+    new ClosedQuestion(`
+Możliwość użycia (key-usage) Key-encipherment, oznacza:
+`,[`
+Możliwość bezpiecznego przesyłania kluczy z użyciem kryptografii asymetrycznej.
+`, `
+Możliwość szyfrowania danych z użyciem klucza publicznego zawartego w certyfikacie.
+`, `
+Możliwość bezpiecznego przesyłania kluczy z użyciem kryptografii symetrycznej.
+`, `
+Możliwość szyfrowania danych symetrycznym algorytmem kryptograficznym z użyciem klucza publicznego zawartego w certyfikacie.
+`], 0),
+    new ClosedQuestion(`
+Asymetryczne algorytmy kryptograficzne:
+`,[`
+Są wolniejsze od symetrycznych.
+`, `
+Oferują większe bezpieczeństwo przy tej samej długości klucza.
+`, `
+Zawsze umożliwiają podpisywanie danych
+`, `
+Zawsze umożliwiają szyfrowanie danych.
+`], 0),
+    new ClosedQuestion(`
+Który format danych nie jest domyślnie dostępny jako strumień wejściowy (input) w systemie Graylog?
+`,[`
+XML
+`, `
+GELF
+`, `
+netflow
+`, `
+syslog
+`], 0),
+    new ClosedQuestion(`
+Domyślny numer portu dla usługi syslog to:
+`,[`
+514
+`, `
+415
+`, `
+80
+`, `
+5080
+`], 0),
+    new ClosedQuestion(`
+Formatem wprowadzonym w systemie Graylog i dedykowanym do przesyłania informacji o zdarzeniach jest:
+`,[`
+Graylog Extended Log Format
+`, `
+GROK
+`, `
+Syslog
+`, `
+Beast
+`], 0),
+    new ClosedQuestion(`
+Silnikiem baz danych dla systemu Graylog jest:
+`,[`
+MongoDB
+`, `
+SQLite
+`, `
+PostgreSQL
+`, `
+MySQL
+`], 0)
+  ];
+
   public static openQuestions: OpenQuestion[] = [
     new OpenQuestion(`
-      question1
     `, `
-      answer1
     `)
+  ];
+
+  public static openQuestionsWDC: OpenQuestion[] = [
+    new OpenQuestion(`
+      Scharakteryzuj relację zawierania PKI i PGP (które jest podzbiorem/nadzbiorem którego). Napisz, jakie cechy, których nie posiada PGP posiada PKI.
+    `, `
+      [todo]
+    `)
+  ];
+
+  public static openQuestionsCustom: OpenQuestion[] = [
+
   ];
 
 }

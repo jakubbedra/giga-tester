@@ -7,9 +7,15 @@
 </div>
 
 <div id="exam">
+  <button (click)="onCheckAllQuestions()">{{allQuestions == true ? "WSZYSTKIE PYTANIA" : "PRZYKŁADOWY EGZAMIN"}}</button>
+  <button (click)="onToggleQuestionsEntries()">Pytania z wejściówek: {{enabledQuestionsEntries == true ? "TAK" : "NIE"}}</button>
+  <button (click)="onToggleQuestionsWdc()">Pytania z WDC: {{enabledQuestionsWdc == true ? "TAK" : "NIE"}}</button>
+  <button (click)="onToggleQuestionsCustom()">Custom pytania: {{enabledQuestionsCustom == true ? "TAK" : "NIE"}}</button>
+
   <h1>Pytania zamknięte:</h1>
-  <h3 [hidden]="!showAnswers">Wynik: {{calculateScore()}}/{{maxPointsClosedQuestions}}</h3>
-  <ul>
+  <h3 [hidden]="!showAnswers" [ngClass]="calculateScore() > maxPointsClosedQuestions/2 ? 'correct-answer' : 'wrong-answer' ">
+    Wynik: {{calculateScore()}}/{{maxPointsClosedQuestions}}
+  </h3><ul>
     <li *ngFor="let q of closedQuestions; let i = index">
       <p>
         {{i + 1}}. {{q.content}}
