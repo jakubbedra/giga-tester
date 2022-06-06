@@ -103,23 +103,23 @@ export class ZbsComponent implements OnInit {
    * @param question
    */
   mixQuestion(question): ClosedQuestion {
-    //console.log(question);
-    //let correctAnswerString = question.answers[question.correctAnswer];
-    //let answersStrings = [];
-    //question.answers.forEach(a => answersStrings.push(a));
-    //question.answers.splice(0, question.answers.length);
-    //let correctAnswerNewInd = 0;
-    //let totalAnswers = answersStrings.length;
-    //for (let i = 0; i < totalAnswers; i++) {
-    //  let ind = Math.floor(Math.random() * answersStrings.length);
-    //  if (answersStrings[ind] === correctAnswerString) {
-    //    correctAnswerNewInd = i;
-    //  }
-    //  question.answers.push(answersStrings[ind]);
-    //  answersStrings.splice(ind, 1);
-    //}
-    //question.correctAnswer = correctAnswerNewInd;
-    //console.log(question);
+    /*console.log(question);
+    let correctAnswerString = question.answers[question.correctAnswer];
+    let answersStrings = [];
+    question.answers.forEach(a => answersStrings.push(a));
+    question.answers.splice(0, question.answers.length);
+    let correctAnswerNewInd = 0;
+    let totalAnswers = answersStrings.length;
+    for (let i = 0; i < totalAnswers; i++) {
+      let ind = Math.floor(Math.random() * answersStrings.length);
+      if (answersStrings[ind] === correctAnswerString) {
+        correctAnswerNewInd = i;
+      }
+      question.answers.push(answersStrings[ind]);
+      answersStrings.splice(ind, 1);
+    }
+    question.correctAnswer = correctAnswerNewInd;
+    console.log(question);*/
     return question;
   }
 
