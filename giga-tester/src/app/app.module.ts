@@ -19,6 +19,7 @@ import { StComponent } from './st/st.component';
 import { EnterKeyComponent } from './enter-key/enter-key.component';
 import { QuestionParserComponent } from './question-parser/question-parser.component';
 import { PmlComponent } from './pml/pml.component';
+import { ExamPageComponent } from './exam-page/exam-page.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { PmlComponent } from './pml/pml.component';
     StComponent,
     EnterKeyComponent,
     QuestionParserComponent,
-    PmlComponent
+    PmlComponent,
+    ExamPageComponent
   ],
   imports: [
     BrowserModule,

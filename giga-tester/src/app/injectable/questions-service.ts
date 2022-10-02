@@ -18,11 +18,29 @@ import {JoBowiszExam} from "../data/jo/jo-bowisz-exam";
 import {BskK1} from "../data/bsk/bsk-k1";
 import {StExam} from "../data/st/st-exam";
 import pmlJson from "../data/pml/pml.json"
+import {ExamQuestionsDto} from "../questions/exam-questions-dto";
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../environments/environment";
+import {Observable} from "rxjs";
 
 @Injectable()
 export class QuestionsService {
 
-  constructor() {
+  constructor(
+    private http: HttpClient
+  ) {
+  }
+
+  public getRandomExamQuestions(examId: number, allQuestions: boolean): Observable<ExamQuestionsDto> {
+    return this.http.get<ExamQuestionsDto>(
+      environment.apiUrl + "/exams/" + examId + "/questions?allQuestions" + allQuestions
+    );
+  }
+
+  public getExamTemplates(subjectId: number): Observable<> {
+   return this.http.get<>(
+     environment.apiUrl + "/subjects/" + subjectId + "/templates"
+   );
   }
 
   public getRandomClosedQuestions(category: string, amount: number, includeCustomQuestions: boolean): ClosedQuestion[] {

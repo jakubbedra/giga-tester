@@ -13,6 +13,7 @@ import {StComponent} from "./st/st.component";
 import {EnterKeyComponent} from "./enter-key/enter-key.component";
 import {QuestionParserComponent} from "./question-parser/question-parser.component";
 import {PmlComponent} from "./pml/pml.component";
+import {ExamPageComponent} from "./exam-page/exam-page.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'jo', component: JoComponent},
   {path: 'ed', component: EdComponent},
   {path: 'st', component: StComponent},
+  {path: 'exams/:subjectId', component: ExamPageComponent},
   //------------------------------------------------------
   {path: '46190c5c-3a50-4b41-92c1-609f54d738d3', component: ZbsEntryComponent},
   {path: '1e83ad9f-459b-4587-baf6-ff801b7dd6a4', component: ZbsComponent},
